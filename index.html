@@ -8,1214 +8,23 @@
   <meta property="og:description" content="Join us for a week of love, tradition and celebration — Nov 23–29, 2026" />
   <meta property="og:image" content="https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80" />
   <title>Lovely & Gaurav | Wedding 2026</title>
-
-  <!-- Google Fonts for all 4 themes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Italiana&family=Jost:wght@300;400;500;600&family=Dancing+Script:wght@400;600;700&family=Lato:wght@300;400;700&family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
-
-  <style>
-    /* ============================================================
-       CSS CUSTOM PROPERTIES — 4 THEME SYSTEM
-       ============================================================ */
-
-    /* THEME 1: Traditional & Royal (Default — Dark Luxurious) */
-    :root {
-      --bg-primary:        #0A0005;
-      --bg-secondary:      #120009;
-      --bg-card:           #1A000F;
-      --bg-card-hover:     #220015;
-      --accent-primary:    #C8922A;
-      --accent-light:      #E8BF6A;
-      --accent-alt:        #7B1535;
-      --text-primary:      #F5ECD7;
-      --text-secondary:    #C8A97A;
-      --text-muted:        #806040;
-      --border:            rgba(200,146,42,0.25);
-      --border-light:      rgba(200,146,42,0.1);
-      --font-display:      'Playfair Display', serif;
-      --font-body:         'Cormorant Garamond', serif;
-      --font-size-body:    1.1rem;
-      --card-shadow:       0 24px 80px rgba(200,146,42,0.12);
-      --btn-bg:            linear-gradient(135deg, #C8922A, #E8BF6A);
-      --btn-text:          #0A0005;
-      --hero-grad-1:       rgba(123,21,53,0.4);
-      --hero-grad-2:       rgba(200,146,42,0.15);
-      --nav-blur:          rgba(10,0,5,0.92);
-      --scrollbar-thumb:   #C8922A;
-      --ornament-opacity:  0.18;
-    }
-
-    /* THEME 2: Modern & Elegant */
-    [data-theme="modern"] {
-      --bg-primary:        #080808;
-      --bg-secondary:      #0F0F0F;
-      --bg-card:           #141414;
-      --bg-card-hover:     #1A1A1A;
-      --accent-primary:    #C09A6B;
-      --accent-light:      #DFC49A;
-      --accent-alt:        #8B6B4A;
-      --text-primary:      #F0EDE8;
-      --text-secondary:    #9A8878;
-      --text-muted:        #5A5040;
-      --border:            rgba(192,154,107,0.2);
-      --border-light:      rgba(192,154,107,0.08);
-      --font-display:      'Italiana', serif;
-      --font-body:         'Jost', sans-serif;
-      --font-size-body:    1rem;
-      --card-shadow:       0 24px 80px rgba(192,154,107,0.08);
-      --btn-bg:            linear-gradient(135deg, #C09A6B, #DFC49A);
-      --btn-text:          #080808;
-      --hero-grad-1:       rgba(139,107,74,0.3);
-      --hero-grad-2:       rgba(192,154,107,0.1);
-      --nav-blur:          rgba(8,8,8,0.95);
-      --scrollbar-thumb:   #C09A6B;
-      --ornament-opacity:  0.08;
-    }
-
-    /* THEME 3: Romantic & Whimsical */
-    [data-theme="romantic"] {
-      --bg-primary:        #FEF6F0;
-      --bg-secondary:      #FDF0EC;
-      --bg-card:           #FFFFFF;
-      --bg-card-hover:     #FFF5F5;
-      --accent-primary:    #C25070;
-      --accent-light:      #E07A95;
-      --accent-alt:        #7A9E7E;
-      --text-primary:      #3A2020;
-      --text-secondary:    #7A4A4A;
-      --text-muted:        #C09090;
-      --border:            rgba(194,80,112,0.2);
-      --border-light:      rgba(194,80,112,0.08);
-      --font-display:      'Dancing Script', cursive;
-      --font-body:         'Lato', sans-serif;
-      --font-size-body:    0.95rem;
-      --card-shadow:       0 16px 60px rgba(194,80,112,0.1);
-      --btn-bg:            linear-gradient(135deg, #C25070, #E07A95);
-      --btn-text:          #FFFFFF;
-      --hero-grad-1:       rgba(194,80,112,0.12);
-      --hero-grad-2:       rgba(122,158,126,0.1);
-      --nav-blur:          rgba(254,246,240,0.95);
-      --scrollbar-thumb:   #C25070;
-      --ornament-opacity:  0.12;
-    }
-
-    /* THEME 4: Fun & Vibrant */
-    [data-theme="vibrant"] {
-      --bg-primary:        #0D0B1E;
-      --bg-secondary:      #141228;
-      --bg-card:           #1A1830;
-      --bg-card-hover:     #201E38;
-      --accent-primary:    #FF5F7E;
-      --accent-light:      #FFD166;
-      --accent-alt:        #06D6A0;
-      --text-primary:      #FFFFFF;
-      --text-secondary:    #B0AACC;
-      --text-muted:        #6A6490;
-      --border:            rgba(255,95,126,0.3);
-      --border-light:      rgba(255,95,126,0.1);
-      --font-display:      'Fredoka One', cursive;
-      --font-body:         'Nunito', sans-serif;
-      --font-size-body:    1rem;
-      --card-shadow:       0 24px 80px rgba(255,95,126,0.2);
-      --btn-bg:            linear-gradient(135deg, #FF5F7E, #FFD166);
-      --btn-text:          #0D0B1E;
-      --hero-grad-1:       rgba(255,95,126,0.3);
-      --hero-grad-2:       rgba(6,214,160,0.15);
-      --nav-blur:          rgba(13,11,30,0.95);
-      --scrollbar-thumb:   #FF5F7E;
-      --ornament-opacity:  0.15;
-    }
-
-    /* ============================================================
-       RESET & BASE
-       ============================================================ */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--bg-primary);
-      color: var(--text-primary);
-      font-family: var(--font-body);
-      font-size: var(--font-size-body);
-      overflow-x: hidden;
-      transition: background 0.7s ease, color 0.7s ease;
-    }
-
-    a { color: inherit; }
-
-    ::-webkit-scrollbar { width: 5px; }
-    ::-webkit-scrollbar-track { background: var(--bg-primary); }
-    ::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
-
-    img { max-width: 100%; display: block; }
-
-    /* ============================================================
-       THEME SWITCHER
-       ============================================================ */
-    .theme-dock {
-      position: fixed;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
-      z-index: 999;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      border-radius: 14px 0 0 14px;
-      border: 1px solid var(--border);
-      border-right: none;
-      background: var(--bg-card);
-      box-shadow: var(--card-shadow);
-    }
-
-    .theme-dock-btn {
-      position: relative;
-      width: 46px;
-      height: 46px;
-      border: none;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      transition: filter 0.3s, transform 0.3s;
-    }
-    .theme-dock-btn:hover { filter: brightness(1.2); }
-    .theme-dock-btn.active { transform: scaleX(1.15); }
-
-    .theme-dock-btn[data-t="royal"]    { background: linear-gradient(160deg,#7B1535,#C8922A); }
-    .theme-dock-btn[data-t="modern"]   { background: linear-gradient(160deg,#080808,#C09A6B); }
-    .theme-dock-btn[data-t="romantic"] { background: linear-gradient(160deg,#FFB6D9,#C25070); }
-    .theme-dock-btn[data-t="vibrant"]  { background: linear-gradient(160deg,#FF5F7E,#06D6A0); }
-
-    .theme-dock-btn::before {
-      content: attr(data-label);
-      position: absolute;
-      right: calc(100% + 2px);
-      top: 50%;
-      transform: translateY(-50%);
-      background: var(--bg-card);
-      color: var(--text-primary);
-      font-family: var(--font-body);
-      font-size: 10px;
-      white-space: nowrap;
-      padding: 4px 10px;
-      border-radius: 6px 0 0 6px;
-      border: 1px solid var(--border);
-      border-right: none;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.25s;
-      letter-spacing: 0.05em;
-    }
-    .theme-dock-btn:hover::before { opacity: 1; }
-
-    /* ============================================================
-       NAVIGATION
-       ============================================================ */
-    .nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 900;
-      padding: 18px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      transition: background 0.5s, backdrop-filter 0.5s, border 0.5s, padding 0.4s;
-    }
-    .nav.scrolled {
-      padding: 12px 40px;
-      background: var(--nav-blur);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      border-bottom: 1px solid var(--border-light);
-    }
-
-    .nav-logo {
-      font-family: var(--font-display);
-      font-size: 1.5rem;
-      color: var(--accent-primary);
-      text-decoration: none;
-      letter-spacing: 0.05em;
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 32px;
-    }
-    .nav-links a {
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--text-secondary);
-      text-decoration: none;
-      transition: color 0.3s;
-      font-family: var(--font-body);
-    }
-    .nav-links a:hover { color: var(--accent-primary); }
-
-    .nav-hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 4px;
-    }
-    .nav-hamburger span {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: var(--accent-primary);
-      transition: all 0.3s;
-      border-radius: 2px;
-    }
-    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
-    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-    .nav-mobile {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: var(--bg-primary);
-      z-index: 880;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 36px;
-    }
-    .nav-mobile.open { display: flex; }
-    .nav-mobile a {
-      font-family: var(--font-display);
-      font-size: 2rem;
-      color: var(--text-primary);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    .nav-mobile a:hover { color: var(--accent-primary); }
-
-    /* ============================================================
-       SHARED UTILITIES
-       ============================================================ */
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .section-label {
-      text-align: center;
-      font-size: 0.7rem;
-      letter-spacing: 0.4em;
-      text-transform: uppercase;
-      color: var(--accent-primary);
-      margin-bottom: 14px;
-      font-family: var(--font-body);
-    }
-
-    .section-title {
-      text-align: center;
-      font-family: var(--font-display);
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
-      color: var(--text-primary);
-      line-height: 1.15;
-      margin-bottom: 14px;
-    }
-
-    .section-sub {
-      text-align: center;
-      color: var(--text-secondary);
-      max-width: 520px;
-      margin: 0 auto 56px;
-      line-height: 1.85;
-      font-size: 1rem;
-    }
-
-    .gold-rule {
-      width: 72px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
-      margin: 16px auto 32px;
-    }
-
-    /* Scroll reveal */
-    .sr {
-      opacity: 0;
-      transform: translateY(36px);
-      transition: opacity 0.75s cubic-bezier(.22,.68,0,1.2), transform 0.75s cubic-bezier(.22,.68,0,1.2);
-    }
-    .sr.sr-left  { transform: translateX(-36px); }
-    .sr.sr-right { transform: translateX(36px); }
-    .sr.sr-scale { transform: scale(0.92); }
-    .sr.on {
-      opacity: 1;
-      transform: none;
-    }
-
-    /* ============================================================
-       HERO
-       ============================================================ */
-    .hero {
-      min-height: 100svh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 100px 24px 80px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-canvas {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-    }
-
-    /* Radial glow backdrop */
-    .hero-glow {
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 80% 60% at 20% 40%, var(--hero-grad-1) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 50% at 80% 70%, var(--hero-grad-2) 0%, transparent 60%);
-      pointer-events: none;
-    }
-
-    /* Rotating ornamental rings */
-    .hero-ring {
-      position: absolute;
-      top: 50%; left: 50%;
-      border-radius: 50%;
-      border: 1px solid var(--accent-primary);
-      opacity: var(--ornament-opacity);
-      pointer-events: none;
-      animation: spin linear infinite;
-    }
-    .hero-ring-1 { width: 340px; height: 340px; margin: -170px 0 0 -170px; animation-duration: 30s; }
-    .hero-ring-2 { width: 560px; height: 560px; margin: -280px 0 0 -280px; animation-duration: 50s; animation-direction: reverse; }
-    .hero-ring-3 { width: 780px; height: 780px; margin: -390px 0 0 -390px; animation-duration: 75s; }
-
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to   { transform: rotate(360deg); }
-    }
-
-    .hero-eyebrow {
-      font-size: 0.72rem;
-      letter-spacing: 0.5em;
-      text-transform: uppercase;
-      color: var(--accent-primary);
-      margin-bottom: 28px;
-      font-family: var(--font-body);
-      opacity: 0;
-      animation: heroFadeUp 1s ease 0.2s forwards;
-    }
-
-    .hero-names {
-      font-family: var(--font-display);
-      font-size: clamp(3.5rem, 12vw, 9rem);
-      line-height: 0.92;
-      color: var(--text-primary);
-      opacity: 0;
-      animation: heroFadeUp 1.2s cubic-bezier(.22,.68,0,1.2) 0.5s forwards;
-    }
-    .hero-names .bride  { display: block; }
-    .hero-names .amp    {
-      display: block;
-      font-size: 0.55em;
-      color: var(--accent-primary);
-      font-style: italic;
-      margin: 4px 0;
-      opacity: 0.9;
-    }
-    .hero-names .groom  { display: block; }
-
-    .hero-rule {
-      width: 120px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
-      margin: 28px auto 28px;
-      opacity: 0;
-      animation: heroFadeUp 1s ease 1s forwards;
-    }
-
-    .hero-date {
-      font-family: var(--font-body);
-      font-size: clamp(1rem, 2.5vw, 1.4rem);
-      color: var(--text-secondary);
-      letter-spacing: 0.22em;
-      opacity: 0;
-      animation: heroFadeUp 1s ease 1.2s forwards;
-    }
-
-    .hero-location {
-      font-size: 0.78rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-top: 10px;
-      opacity: 0;
-      animation: heroFadeUp 1s ease 1.4s forwards;
-    }
-
-    /* Countdown */
-    .hero-countdown {
-      display: flex;
-      align-items: flex-start;
-      gap: 4px;
-      margin-top: 52px;
-      opacity: 0;
-      animation: heroFadeUp 1s ease 1.7s forwards;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .cd-unit {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-width: 80px;
-    }
-
-    .cd-num {
-      font-family: var(--font-display);
-      font-size: clamp(2.5rem, 7vw, 4.5rem);
-      color: var(--accent-primary);
-      line-height: 1;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    .cd-label {
-      font-size: 0.62rem;
-      letter-spacing: 0.32em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-top: 6px;
-    }
-
-    .cd-colon {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 5vw, 3rem);
-      color: var(--accent-primary);
-      opacity: 0.4;
-      padding-top: 4px;
-      align-self: flex-start;
-    }
-
-    /* Scroll hint */
-    .hero-scroll {
-      position: absolute;
-      bottom: 32px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      opacity: 0;
-      animation: heroFadeUp 1s ease 2.2s forwards;
-    }
-    .hero-scroll span {
-      font-size: 0.62rem;
-      letter-spacing: 0.32em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-    }
-    .hero-scroll-mouse {
-      width: 18px;
-      height: 28px;
-      border: 1px solid var(--accent-primary);
-      border-radius: 9px;
-      position: relative;
-    }
-    .hero-scroll-mouse::after {
-      content: '';
-      position: absolute;
-      top: 5px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 3px;
-      height: 3px;
-      background: var(--accent-primary);
-      border-radius: 50%;
-      animation: scrollDot 1.6s ease infinite;
-    }
-
-    @keyframes scrollDot {
-      0%   { top: 5px; opacity: 1; }
-      70%  { top: 16px; opacity: 0.2; }
-      100% { top: 5px; opacity: 1; }
-    }
-
-    @keyframes heroFadeUp {
-      from { opacity: 0; transform: translateY(28px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ============================================================
-       SECTION WRAPPERS
-       ============================================================ */
-    .sec-story        { background: var(--bg-secondary); padding: 100px 0; }
-    .sec-itinerary    { background: var(--bg-primary);   padding: 100px 0; }
-    .sec-gallery      { background: var(--bg-secondary); padding: 100px 0; }
-    .sec-venues       { background: var(--bg-primary);   padding: 100px 0; }
-    .sec-accommodation{ background: var(--bg-secondary); padding: 100px 0; }
-    .sec-rsvp         { background: var(--bg-primary);   padding: 100px 0; position: relative; overflow: hidden; }
-
-    /* ============================================================
-       STORY
-       ============================================================ */
-    .story-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 72px;
-      align-items: center;
-      margin-top: 24px;
-    }
-
-    .story-img-wrap {
-      position: relative;
-      border-radius: 6px;
-      overflow: hidden;
-      aspect-ratio: 3 / 4;
-    }
-    .story-img-wrap img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 0.8s ease;
-    }
-    .story-img-wrap:hover img { transform: scale(1.04); }
-    .story-img-frame {
-      position: absolute;
-      inset: 14px;
-      border: 1px solid var(--accent-primary);
-      border-radius: 4px;
-      opacity: 0.35;
-      pointer-events: none;
-    }
-
-    .story-text h3 {
-      font-family: var(--font-display);
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      color: var(--text-primary);
-      line-height: 1.3;
-      margin-bottom: 24px;
-    }
-
-    .story-text p {
-      color: var(--text-secondary);
-      line-height: 1.95;
-      margin-bottom: 20px;
-      font-size: var(--font-size-body);
-    }
-
-    .story-stats {
-      display: flex;
-      gap: 28px;
-      margin-top: 40px;
-      padding-top: 32px;
-      border-top: 1px solid var(--border);
-    }
-    .stat-item { text-align: center; }
-    .stat-num {
-      font-family: var(--font-display);
-      font-size: 2.2rem;
-      color: var(--accent-primary);
-      display: block;
-      line-height: 1;
-    }
-    .stat-label {
-      font-size: 0.68rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-top: 6px;
-      display: block;
-    }
-
-    /* ============================================================
-       ITINERARY TIMELINE
-       ============================================================ */
-    .timeline {
-      position: relative;
-      margin-top: 16px;
-    }
-
-    .timeline-spine {
-      position: absolute;
-      left: 50%;
-      top: 0; bottom: 0;
-      width: 1px;
-      background: linear-gradient(180deg, transparent, var(--accent-primary) 8%, var(--accent-primary) 92%, transparent);
-      transform: translateX(-50%);
-    }
-
-    .tl-item {
-      display: grid;
-      grid-template-columns: 1fr 64px 1fr;
-      align-items: start;
-      margin-bottom: 44px;
-      position: relative;
-    }
-
-    /* Odd items: card left, date right */
-    .tl-item:nth-child(odd)  .tl-card { grid-column: 1; }
-    .tl-item:nth-child(odd)  .tl-dot  { grid-column: 2; }
-    .tl-item:nth-child(odd)  .tl-date { grid-column: 3; text-align: left; }
-
-    /* Even items: date left, card right */
-    .tl-item:nth-child(even) .tl-date { grid-column: 1; grid-row: 1; text-align: right; }
-    .tl-item:nth-child(even) .tl-dot  { grid-column: 2; grid-row: 1; }
-    .tl-item:nth-child(even) .tl-card { grid-column: 3; grid-row: 1; }
-
-    .tl-dot {
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      padding-top: 22px;
-    }
-    .tl-dot-inner {
-      width: 14px; height: 14px;
-      background: var(--accent-primary);
-      border-radius: 50%;
-      border: 3px solid var(--bg-primary);
-      box-shadow: 0 0 0 1px var(--accent-primary), 0 0 12px rgba(200,146,42,0.4);
-      flex-shrink: 0;
-    }
-
-    .tl-date {
-      padding: 22px 20px 0;
-      font-size: 0.72rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent-primary);
-      font-family: var(--font-body);
-      line-height: 1.6;
-    }
-
-    .tl-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 24px 24px 22px;
-      transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
-    }
-    .tl-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--card-shadow);
-      background: var(--bg-card-hover);
-    }
-
-    .tl-icon { font-size: 2rem; margin-bottom: 12px; }
-
-    .tl-name {
-      font-family: var(--font-display);
-      font-size: 1.25rem;
-      color: var(--text-primary);
-      margin-bottom: 8px;
-      line-height: 1.3;
-    }
-
-    .tl-time {
-      font-size: 0.78rem;
-      color: var(--accent-primary);
-      letter-spacing: 0.08em;
-      margin-bottom: 6px;
-    }
-
-    .tl-venue {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      display: flex;
-      align-items: flex-start;
-      gap: 5px;
-      line-height: 1.5;
-    }
-
-    .tl-desc {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-      margin-top: 10px;
-      border-top: 1px solid var(--border-light);
-      padding-top: 10px;
-    }
-
-    /* ============================================================
-       GALLERY
-       ============================================================ */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 260px 260px;
-      gap: 10px;
-    }
-
-    .g-item {
-      overflow: hidden;
-      border-radius: 6px;
-      position: relative;
-      cursor: zoom-in;
-    }
-    .g-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
-    .g-item:nth-child(4) { grid-column: span 2; }
-
-    .g-item img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 0.7s cubic-bezier(.22,.68,0,1.2);
-    }
-    .g-item:hover img { transform: scale(1.07); }
-
-    .g-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, var(--accent-primary), var(--accent-alt));
-      opacity: 0;
-      transition: opacity 0.35s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.2rem;
-    }
-    .g-item:hover .g-overlay { opacity: 0.25; }
-
-    /* Lightbox */
-    .lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.92);
-      z-index: 2000;
-      align-items: center;
-      justify-content: center;
-    }
-    .lightbox.open { display: flex; }
-    .lightbox img {
-      max-width: 90vw;
-      max-height: 90vh;
-      object-fit: contain;
-      border-radius: 6px;
-    }
-    .lightbox-close {
-      position: absolute;
-      top: 24px; right: 32px;
-      font-size: 2rem;
-      color: #fff;
-      background: none;
-      border: none;
-      cursor: pointer;
-      line-height: 1;
-    }
-
-    /* ============================================================
-       VENUES
-       ============================================================ */
-    .venue-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
-    }
-
-    .venue-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      overflow: hidden;
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
-    }
-    .venue-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--card-shadow);
-    }
-
-    .venue-thumb {
-      height: 175px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 4rem;
-      background: linear-gradient(135deg, var(--bg-secondary), var(--bg-card));
-      position: relative;
-      overflow: hidden;
-    }
-
-    .venue-body { padding: 22px; }
-
-    .venue-name {
-      font-family: var(--font-display);
-      font-size: 1.2rem;
-      color: var(--text-primary);
-      margin-bottom: 6px;
-    }
-
-    .venue-loc {
-      font-size: 0.8rem;
-      color: var(--accent-primary);
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      margin-bottom: 12px;
-    }
-
-    .venue-desc {
-      font-size: 0.88rem;
-      color: var(--text-secondary);
-      line-height: 1.65;
-      margin-bottom: 16px;
-    }
-
-    .venue-map {
-      width: 100%;
-      height: 150px;
-      border-radius: 6px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-    }
-    .venue-map iframe {
-      width: 100%; height: 100%;
-      border: none;
-      filter: grayscale(40%) contrast(1.1);
-    }
-
-    /* ============================================================
-       ACCOMMODATION
-       ============================================================ */
-    .hotel-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-    }
-
-    .hotel-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 30px 28px;
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
-    }
-    .hotel-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--card-shadow);
-    }
-
-    .hotel-icon { font-size: 2.8rem; margin-bottom: 18px; }
-
-    .hotel-tag {
-      display: inline-block;
-      padding: 3px 12px;
-      background: var(--accent-primary);
-      color: var(--btn-text);
-      font-size: 0.68rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      border-radius: 20px;
-      margin-bottom: 14px;
-      font-weight: 700;
-    }
-
-    .hotel-name {
-      font-family: var(--font-display);
-      font-size: 1.15rem;
-      color: var(--text-primary);
-      margin-bottom: 6px;
-    }
-
-    .hotel-loc {
-      font-size: 0.8rem;
-      color: var(--accent-primary);
-      margin-bottom: 12px;
-    }
-
-    .hotel-desc {
-      font-size: 0.88rem;
-      color: var(--text-secondary);
-      line-height: 1.7;
-      margin-bottom: 18px;
-    }
-
-    .hotel-link {
-      font-size: 0.82rem;
-      color: var(--accent-primary);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-primary);
-      padding-bottom: 2px;
-      transition: opacity 0.3s;
-    }
-    .hotel-link:hover { opacity: 0.65; }
-
-    /* ============================================================
-       RSVP
-       ============================================================ */
-    .rsvp-blob {
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 70% 50% at 20% 60%, var(--hero-grad-1), transparent 55%),
-        radial-gradient(ellipse 50% 40% at 80% 30%, var(--hero-grad-2), transparent 55%);
-      pointer-events: none;
-      opacity: 0.6;
-    }
-
-    .rsvp-box {
-      position: relative;
-      max-width: 560px;
-      margin: 0 auto;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 52px 44px;
-    }
-
-    .form-label {
-      display: block;
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 10px;
-      font-family: var(--font-body);
-    }
-
-    .form-input {
-      width: 100%;
-      padding: 14px 16px;
-      background: var(--bg-secondary);
-      border: 1px solid var(--border);
-      border-radius: 7px;
-      color: var(--text-primary);
-      font-family: var(--font-body);
-      font-size: 1rem;
-      transition: border-color 0.3s, box-shadow 0.3s;
-      outline: none;
-      margin-bottom: 22px;
-    }
-    .form-input:focus {
-      border-color: var(--accent-primary);
-      box-shadow: 0 0 0 3px rgba(200,146,42,0.12);
-    }
-
-    .radio-row {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 22px;
-    }
-
-    .radio-opt {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 13px;
-      background: var(--bg-secondary);
-      border: 1px solid var(--border);
-      border-radius: 7px;
-      cursor: pointer;
-      transition: all 0.3s;
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      font-family: var(--font-body);
-    }
-    .radio-opt:has(input:checked) {
-      border-color: var(--accent-primary);
-      color: var(--accent-primary);
-      background: var(--bg-card);
-      box-shadow: 0 0 0 3px rgba(200,146,42,0.1);
-    }
-    .radio-opt input { display: none; }
-
-    .rsvp-btn {
-      width: 100%;
-      padding: 18px;
-      background: var(--btn-bg);
-      color: var(--btn-text);
-      border: none;
-      border-radius: 7px;
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      letter-spacing: 0.06em;
-      cursor: pointer;
-      transition: opacity 0.3s, transform 0.25s;
-      margin-top: 6px;
-    }
-    .rsvp-btn:hover { opacity: 0.88; transform: translateY(-3px); }
-    .rsvp-btn:active { transform: translateY(0); }
-    .rsvp-btn:disabled { opacity: 0.5; cursor: wait; }
-
-    .rsvp-success {
-      display: none;
-      text-align: center;
-      padding: 24px 0;
-    }
-    .rsvp-success-icon { font-size: 4.5rem; margin-bottom: 18px; }
-    .rsvp-success h3 {
-      font-family: var(--font-display);
-      font-size: 2rem;
-      color: var(--accent-primary);
-      margin-bottom: 12px;
-    }
-    .rsvp-success p { color: var(--text-secondary); line-height: 1.7; }
-
-    /* ============================================================
-       FOOTER
-       ============================================================ */
-    .footer {
-      background: var(--bg-card);
-      border-top: 1px solid var(--border);
-      padding: 72px 24px 48px;
-      text-align: center;
-    }
-
-    .footer-couple {
-      font-family: var(--font-display);
-      font-size: clamp(2.2rem, 6vw, 4rem);
-      color: var(--accent-primary);
-      margin-bottom: 12px;
-    }
-
-    .footer-date-text {
-      font-size: 0.72rem;
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 44px;
-    }
-
-    .footer-nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px 32px;
-      margin-bottom: 48px;
-      list-style: none;
-    }
-    .footer-nav a {
-      font-size: 0.72rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    .footer-nav a:hover { color: var(--accent-primary); }
-
-    .footer-credit {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-    }
-
-    /* ============================================================
-       MUSIC BUTTON
-       ============================================================ */
-    .music-btn {
-      position: fixed;
-      bottom: 28px;
-      left: 28px;
-      z-index: 999;
-      width: 48px; height: 48px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      cursor: pointer;
-      box-shadow: var(--card-shadow);
-      transition: transform 0.3s;
-    }
-    .music-btn:hover { transform: scale(1.1); }
-    .music-btn.playing { animation: musicPulse 1.4s ease infinite; }
-
-    @keyframes musicPulse {
-      0%, 100% { box-shadow: 0 0 0 0 var(--accent-primary); }
-      50%       { box-shadow: 0 0 0 10px transparent; }
-    }
-
-    /* ============================================================
-       RESPONSIVE
-       ============================================================ */
-    @media (max-width: 860px) {
-      .nav { padding: 16px 20px; }
-      .nav.scrolled { padding: 12px 20px; }
-      .nav-links { display: none; }
-      .nav-hamburger { display: flex; }
-
-      .story-grid { grid-template-columns: 1fr; gap: 40px; }
-      .story-img-wrap { aspect-ratio: 16/9; max-height: 280px; }
-
-      .timeline-spine { left: 22px; }
-      .tl-item {
-        grid-template-columns: 44px 1fr;
-      }
-      .tl-item:nth-child(odd) .tl-card,
-      .tl-item:nth-child(even) .tl-card  { grid-column: 2; grid-row: 1; }
-      .tl-item:nth-child(odd) .tl-dot,
-      .tl-item:nth-child(even) .tl-dot   { grid-column: 1; grid-row: 1; }
-      .tl-item:nth-child(odd) .tl-date,
-      .tl-item:nth-child(even) .tl-date  { grid-column: 2; grid-row: 2; text-align: left; padding: 8px 0 0; }
-
-      .gallery-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 180px 180px 180px;
-      }
-      .g-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
-      .g-item:nth-child(4) { grid-column: span 1; }
-
-      .rsvp-box { padding: 36px 22px; }
-
-      .theme-dock {
-        top: auto;
-        bottom: 90px;
-        transform: none;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .sec-story, .sec-itinerary, .sec-gallery,
-      .sec-venues, .sec-accommodation, .sec-rsvp { padding: 72px 0; }
-      .cd-unit { min-width: 60px; }
-      .cd-num { font-size: 2.2rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/botanical.css" />
 </head>
-
 <body>
-
-  <!-- ================================================
-       THEME DOCK
-       ================================================ -->
-  <div class="theme-dock" role="navigation" aria-label="Theme switcher">
-    <button class="theme-dock-btn active" data-t="royal"    data-label="Traditional &amp; Royal" aria-label="Traditional and Royal theme" title="Traditional &amp; Royal">👑</button>
-    <button class="theme-dock-btn"        data-t="modern"   data-label="Modern &amp; Elegant"   aria-label="Modern and Elegant theme"   title="Modern &amp; Elegant">✨</button>
-    <button class="theme-dock-btn"        data-t="romantic" data-label="Romantic &amp; Whimsical" aria-label="Romantic and Whimsical theme" title="Romantic &amp; Whimsical">🌸</button>
-    <button class="theme-dock-btn"        data-t="vibrant"  data-label="Fun &amp; Vibrant"      aria-label="Fun and Vibrant theme"      title="Fun &amp; Vibrant">🎉</button>
-  </div>
-
-  <!-- Music -->
-  <button class="music-btn" id="musicBtn" aria-label="Toggle background music">🎵</button>
 
   <!-- ================================================
        NAVIGATION
        ================================================ -->
   <nav class="nav" id="nav" aria-label="Main navigation">
-    <a href="#hero" class="nav-logo">L &amp; G</a>
+    <a href="index.html" class="nav-logo">L &amp; G</a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#story">Our Story</a></li>
-      <li><a href="#itinerary">Itinerary</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#venues">Venues</a></li>
-      <li><a href="#stay">Stay</a></li>
-      <li><a href="#rsvp">RSVP</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="venues.html">Venues</a></li>
+      <li><a href="travel.html">Travel</a></li>
+      <li><a href="rsvp.html">RSVP</a></li>
     </ul>
     <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -1224,116 +33,736 @@
 
   <!-- Mobile Nav -->
   <div class="nav-mobile" id="mobileNav" role="dialog" aria-label="Mobile navigation">
-    <a href="#story"      data-nav-close>Our Story</a>
-    <a href="#itinerary"  data-nav-close>Itinerary</a>
-    <a href="#gallery"    data-nav-close>Gallery</a>
-    <a href="#venues"     data-nav-close>Venues</a>
-    <a href="#stay"       data-nav-close>Stay</a>
-    <a href="#rsvp"       data-nav-close>RSVP</a>
+    <a href="index.html" data-nav-close>Home</a>
+    <a href="events.html" data-nav-close>Events</a>
+    <a href="gallery.html" data-nav-close>Gallery</a>
+    <a href="venues.html" data-nav-close>Venues</a>
+    <a href="travel.html" data-nav-close>Travel</a>
+    <a href="rsvp.html" data-nav-close>RSVP</a>
   </div>
 
   <!-- ================================================
        HERO
        ================================================ -->
-  <section class="hero" id="hero" aria-label="Hero — Wedding invitation">
-    <div class="hero-glow" aria-hidden="true"></div>
-    <div class="hero-ring hero-ring-1" aria-hidden="true"></div>
-    <div class="hero-ring hero-ring-2" aria-hidden="true"></div>
-    <div class="hero-ring hero-ring-3" aria-hidden="true"></div>
+  <section class="hero-home" id="hero" aria-label="Wedding invitation hero">
+    <style>
+      .hero-home {
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 100px 24px 80px;
+        background: var(--cream-light);
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-home::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(ellipse 80% 60% at 25% 45%, rgba(157,175,142,0.15) 0%, transparent 60%),
+          radial-gradient(ellipse 60% 50% at 75% 55%, rgba(200,164,90,0.1) 0%, transparent 60%);
+        pointer-events: none;
+      }
+      .hero-content { position: relative; z-index: 1; }
+      .hero-eyebrow {
+        font-family: var(--font-script);
+        font-size: 1.4rem;
+        color: var(--rose);
+        margin-bottom: 20px;
+        opacity: 0;
+        animation: heroFadeUp 1s ease 0.2s forwards;
+      }
+      .hero-names {
+        font-family: var(--font-display);
+        font-size: clamp(3.5rem, 12vw, 9rem);
+        font-weight: 600;
+        line-height: 0.92;
+        margin-bottom: 0;
+        opacity: 0;
+        animation: heroFadeUp 1.2s cubic-bezier(.22,.68,0,1.2) 0.5s forwards;
+      }
+      .hero-names .bride, .hero-names .groom { display: block; }
+      .hero-names .amp {
+        display: block;
+        font-size: 0.5em;
+        font-style: italic;
+        font-weight: 300;
+        color: var(--rose);
+        margin: 6px 0;
+        -webkit-text-fill-color: var(--rose);
+      }
+      .hero-rule {
+        width: 100px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        margin: 28px auto;
+        opacity: 0;
+        animation: heroFadeUp 1s ease 1s forwards;
+      }
+      .hero-date {
+        font-family: var(--font-display);
+        font-size: clamp(1rem, 2.5vw, 1.4rem);
+        font-weight: 300;
+        color: var(--brown-mid);
+        letter-spacing: 0.22em;
+        opacity: 0;
+        animation: heroFadeUp 1s ease 1.2s forwards;
+      }
+      .hero-location {
+        font-size: 0.76rem;
+        letter-spacing: 0.26em;
+        text-transform: uppercase;
+        color: var(--brown-light);
+        margin-top: 10px;
+        opacity: 0;
+        animation: heroFadeUp 1s ease 1.4s forwards;
+      }
+      .hero-countdown {
+        display: flex;
+        align-items: flex-start;
+        gap: 4px;
+        margin-top: 52px;
+        opacity: 0;
+        animation: heroFadeUp 1s ease 1.7s forwards;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .cd-unit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 80px;
+      }
+      .cd-num {
+        font-family: var(--font-display);
+        font-size: clamp(2.4rem, 7vw, 4.5rem);
+        font-weight: 600;
+        color: var(--gold-dark);
+        line-height: 1;
+        letter-spacing: -0.02em;
+      }
+      .cd-label {
+        font-size: 0.6rem;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: var(--brown-light);
+        margin-top: 6px;
+        font-weight: 700;
+      }
+      .cd-colon {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 5vw, 3rem);
+        color: var(--gold);
+        opacity: 0.5;
+        padding-top: 2px;
+        align-self: flex-start;
+      }
+      .hero-scroll {
+        position: absolute;
+        bottom: 32px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        opacity: 0;
+        animation: heroFadeUp 1s ease 2.2s forwards;
+      }
+      .hero-scroll span {
+        font-size: 0.6rem;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: var(--brown-light);
+      }
+      .hero-scroll-mouse {
+        width: 18px; height: 28px;
+        border: 1.5px solid var(--gold);
+        border-radius: 9px;
+        position: relative;
+      }
+      .hero-scroll-mouse::after {
+        content: '';
+        position: absolute;
+        top: 5px; left: 50%;
+        transform: translateX(-50%);
+        width: 3px; height: 3px;
+        background: var(--gold);
+        border-radius: 50%;
+        animation: scrollDot 1.6s ease infinite;
+      }
+      @keyframes scrollDot {
+        0%   { top: 5px; opacity: 1; }
+        70%  { top: 16px; opacity: 0.2; }
+        100% { top: 5px; opacity: 1; }
+      }
+      @keyframes heroFadeUp {
+        from { opacity: 0; transform: translateY(28px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+      @media (max-width: 480px) {
+        .cd-unit { min-width: 60px; }
+        .cd-num { font-size: 2.2rem; }
+      }
+    </style>
 
-    <p class="hero-eyebrow">Together Forever • A Wedding Celebration</p>
+    <!-- Botanical corner frames -->
+    <div class="hero-botanical-wrap" aria-hidden="true">
+      <!-- Corner TL -->
+      <svg class="corner-botanical corner-tl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" fill="none">
+        <!-- Gold foil branch underlay -->
+        <path d="M 12 12 C 38 44 65 82 82 120 C 98 156 104 200 106 258" stroke="#E2C47A" stroke-width="2.4" stroke-linecap="round" opacity="0.5"/>
+        <path d="M 40 56 C 76 42 118 30 170 18" stroke="#E2C47A" stroke-width="1.8" stroke-linecap="round" opacity="0.5"/>
+        <path d="M 76 118 C 114 102 154 92 196 84" stroke="#E2C47A" stroke-width="1.5" stroke-linecap="round" opacity="0.45"/>
+        <path d="M 60 90 C 90 73 126 58 166 46" stroke="#E2C47A" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+        <!-- Sage green branch overlay -->
+        <path d="M 12 12 C 38 44 65 82 82 120 C 98 156 104 200 106 258" stroke="#9DAF8E" stroke-width="1.7" stroke-linecap="round"/>
+        <path d="M 40 56 C 76 42 118 30 170 18" stroke="#9DAF8E" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M 76 118 C 114 102 154 92 196 84" stroke="#9DAF8E" stroke-width="1.0" stroke-linecap="round"/>
+        <path d="M 60 90 C 90 73 126 58 166 46" stroke="#9DAF8E" stroke-width="0.9" stroke-linecap="round" opacity="0.85"/>
+        <!-- Leaves on main branch (vertical) -->
+        <path d="M 32 56 Q 46 48 50 56 Q 42 64 32 56 Z" fill="#9DAF8E" opacity="0.7"/>
+        <path d="M 32 56 Q 18 48 14 56 Q 20 65 32 56 Z" fill="#9DAF8E" opacity="0.6"/>
+        <path d="M 32 56 L 48 50" stroke="#C8A45A" stroke-width="0.7" opacity="0.65"/>
+        <path d="M 58 96 Q 74 88 77 97 Q 69 105 58 96 Z" fill="#9DAF8E" opacity="0.7"/>
+        <path d="M 58 96 Q 43 88 40 97 Q 47 106 58 96 Z" fill="#9DAF8E" opacity="0.6"/>
+        <path d="M 58 96 L 75 90" stroke="#C8A45A" stroke-width="0.7" opacity="0.65"/>
+        <path d="M 76 132 Q 91 124 94 133 Q 87 142 76 132 Z" fill="#9DAF8E" opacity="0.68"/>
+        <path d="M 76 132 Q 61 124 58 133 Q 65 142 76 132 Z" fill="#9DAF8E" opacity="0.58"/>
+        <path d="M 88 165 Q 103 158 106 167 Q 99 175 88 165 Z" fill="#9DAF8E" opacity="0.62"/>
+        <path d="M 88 165 Q 73 158 70 167 Q 77 176 88 165 Z" fill="#9DAF8E" opacity="0.52"/>
+        <!-- Leaves on right branch -->
+        <path d="M 72 42 Q 78 31 86 33 Q 83 40 72 42 Z" fill="#9DAF8E" opacity="0.72"/>
+        <path d="M 72 42 Q 78 53 86 51 Q 83 45 72 42 Z" fill="#9DAF8E" opacity="0.62"/>
+        <path d="M 72 42 L 84 35" stroke="#C8A45A" stroke-width="0.7" opacity="0.65"/>
+        <path d="M 106 32 Q 112 21 120 23 Q 117 30 106 32 Z" fill="#9DAF8E" opacity="0.72"/>
+        <path d="M 106 32 Q 112 43 120 41 Q 117 35 106 32 Z" fill="#9DAF8E" opacity="0.62"/>
+        <path d="M 106 32 L 118 25" stroke="#C8A45A" stroke-width="0.7" opacity="0.65"/>
+        <path d="M 142 24 Q 148 13 157 15 Q 153 22 142 24 Z" fill="#9DAF8E" opacity="0.72"/>
+        <path d="M 142 24 Q 148 35 157 33 Q 153 27 142 24 Z" fill="#9DAF8E" opacity="0.62"/>
+        <path d="M 142 24 L 154 17" stroke="#C8A45A" stroke-width="0.7" opacity="0.65"/>
+        <!-- Leaves on lower branch -->
+        <path d="M 114 104 Q 120 93 128 95 Q 125 103 114 104 Z" fill="#9DAF8E" opacity="0.65"/>
+        <path d="M 114 104 Q 120 115 128 113 Q 125 107 114 104 Z" fill="#9DAF8E" opacity="0.55"/>
+        <path d="M 156 96 Q 162 85 171 87 Q 168 95 156 96 Z" fill="#9DAF8E" opacity="0.65"/>
+        <path d="M 156 96 Q 162 107 171 105 Q 168 99 156 96 Z" fill="#9DAF8E" opacity="0.55"/>
+        <!-- Leaves on mid branch -->
+        <path d="M 97 78 Q 103 67 112 69 Q 108 77 97 78 Z" fill="#9DAF8E" opacity="0.62"/>
+        <path d="M 97 78 Q 103 89 112 87 Q 108 81 97 78 Z" fill="#9DAF8E" opacity="0.52"/>
+        <path d="M 136 62 Q 142 51 151 53 Q 147 61 136 62 Z" fill="#9DAF8E" opacity="0.62"/>
+        <path d="M 136 62 Q 142 73 151 71 Q 147 65 136 62 Z" fill="#9DAF8E" opacity="0.52"/>
+        <!-- === LARGE PEONY at corner === -->
+        <!-- Outer petals (8 petals radiating from center 20,20) -->
+        <path d="M 20 20 Q 14 9 18 4 Q 24 8 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 28 9 33 12 Q 31 19 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 33 18 36 24 Q 30 28 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 28 30 25 35 Q 19 32 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 14 31 10 28 Q 12 22 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 7 21 5 15 Q 9 10 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 9 11 12 5 Q 17 7 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 16 8 20 4 Q 22 8 20 20 Z" fill="#C4A29E" opacity="0.45"/>
+        <!-- Gold foil petal outlines -->
+        <path d="M 20 20 Q 14 9 18 4 Q 24 8 20 20 Z" fill="none" stroke="#E2C47A" stroke-width="0.55" opacity="0.65"/>
+        <path d="M 20 20 Q 28 9 33 12 Q 31 19 20 20 Z" fill="none" stroke="#E2C47A" stroke-width="0.55" opacity="0.65"/>
+        <path d="M 20 20 Q 33 18 36 24 Q 30 28 20 20 Z" fill="none" stroke="#E2C47A" stroke-width="0.55" opacity="0.65"/>
+        <path d="M 20 20 Q 28 30 25 35 Q 19 32 20 20 Z" fill="none" stroke="#E2C47A" stroke-width="0.55" opacity="0.65"/>
+        <path d="M 20 20 Q 7 21 5 15 Q 9 10 20 20 Z" fill="none" stroke="#E2C47A" stroke-width="0.55" opacity="0.65"/>
+        <!-- Inner petals -->
+        <path d="M 20 20 Q 16 13 19 9 Q 22 13 20 20 Z" fill="#EDD8D6" opacity="0.8"/>
+        <path d="M 20 20 Q 25 13 28 16 Q 25 19 20 20 Z" fill="#EDD8D6" opacity="0.8"/>
+        <path d="M 20 20 Q 27 22 26 27 Q 22 26 20 20 Z" fill="#EDD8D6" opacity="0.8"/>
+        <path d="M 20 20 Q 16 27 13 24 Q 14 20 20 20 Z" fill="#EDD8D6" opacity="0.8"/>
+        <!-- Gold center -->
+        <circle cx="20" cy="20" r="5.5" fill="#C8A45A" opacity="0.55"/>
+        <circle cx="20" cy="20" r="3.5" fill="#E2C47A" opacity="0.72"/>
+        <circle cx="20" cy="20" r="1.8" fill="#F0D890" opacity="0.9"/>
+        <!-- === SECONDARY BLOOM at branch end (~170,18) === -->
+        <path d="M 170 18 Q 164 11 167 7 Q 173 11 170 18 Z" fill="#C4A29E" opacity="0.65"/>
+        <path d="M 170 18 Q 176 11 180 13 Q 178 18 170 18 Z" fill="#C4A29E" opacity="0.65"/>
+        <path d="M 170 18 Q 176 24 173 28 Q 168 25 170 18 Z" fill="#C4A29E" opacity="0.65"/>
+        <path d="M 170 18 Q 163 23 161 20 Q 162 15 170 18 Z" fill="#C4A29E" opacity="0.65"/>
+        <path d="M 170 18 Q 170 11 170 7 Q 172 11 170 18 Z" fill="#EDD8D6" opacity="0.7"/>
+        <circle cx="170" cy="18" r="4" fill="#C8A45A" opacity="0.58"/>
+        <circle cx="170" cy="18" r="2.2" fill="#E2C47A" opacity="0.78"/>
+        <circle cx="170" cy="18" r="1" fill="#F0D890" opacity="0.95"/>
+        <!-- === SMALL BLOOM at lower branch end (~196,84) === -->
+        <path d="M 196 84 Q 190 77 193 73 Q 198 77 196 84 Z" fill="#C4A29E" opacity="0.6"/>
+        <path d="M 196 84 Q 202 77 206 80 Q 203 86 196 84 Z" fill="#C4A29E" opacity="0.6"/>
+        <path d="M 196 84 Q 202 91 198 95 Q 193 91 196 84 Z" fill="#C4A29E" opacity="0.6"/>
+        <path d="M 196 84 Q 188 91 186 87 Q 188 82 196 84 Z" fill="#C4A29E" opacity="0.6"/>
+        <circle cx="196" cy="84" r="3.5" fill="#C8A45A" opacity="0.6"/>
+        <circle cx="196" cy="84" r="2" fill="#E2C47A" opacity="0.8"/>
+        <!-- === GOLD BUTTERFLY #1 near right branch (~62,42) === -->
+        <path d="M 62 42 Q 76 30 86 34 Q 77 47 62 42 Z" fill="#C8A45A" opacity="0.52"/>
+        <path d="M 62 42 Q 46 31 42 37 Q 50 50 62 42 Z" fill="#C8A45A" opacity="0.44"/>
+        <path d="M 62 42 Q 74 52 72 62 Q 65 60 62 42 Z" fill="#E2C47A" opacity="0.44"/>
+        <path d="M 62 42 Q 46 52 44 60 Q 54 60 62 42 Z" fill="#E2C47A" opacity="0.38"/>
+        <path d="M 62 42 Q 76 30 86 34 Q 77 47 62 42 Z" fill="none" stroke="#E2C47A" stroke-width="0.5" opacity="0.65"/>
+        <path d="M 62 42 Q 46 31 42 37 Q 50 50 62 42 Z" fill="none" stroke="#E2C47A" stroke-width="0.5" opacity="0.65"/>
+        <ellipse cx="62" cy="42" rx="1.8" ry="5" fill="#C8A45A" opacity="0.88"/>
+        <path d="M 62 37 Q 59 29 54 25" stroke="#C8A45A" stroke-width="0.75" stroke-linecap="round" fill="none" opacity="0.78"/>
+        <path d="M 62 37 Q 65 29 70 25" stroke="#C8A45A" stroke-width="0.75" stroke-linecap="round" fill="none" opacity="0.78"/>
+        <circle cx="54" cy="25" r="1.4" fill="#C8A45A" opacity="0.8"/>
+        <circle cx="70" cy="25" r="1.4" fill="#C8A45A" opacity="0.8"/>
+        <!-- === GOLD BUTTERFLY #2 (smaller) near mid branch (~108,120) === -->
+        <path d="M 108 120 Q 119 112 125 115 Q 118 124 108 120 Z" fill="#C8A45A" opacity="0.48"/>
+        <path d="M 108 120 Q 97 112 93 116 Q 99 125 108 120 Z" fill="#C8A45A" opacity="0.4"/>
+        <path d="M 108 120 Q 117 128 115 135 Q 110 132 108 120 Z" fill="#E2C47A" opacity="0.4"/>
+        <path d="M 108 120 Q 99 128 97 133 Q 103 132 108 120 Z" fill="#E2C47A" opacity="0.34"/>
+        <ellipse cx="108" cy="120" rx="1.5" ry="4.5" fill="#C8A45A" opacity="0.82"/>
+        <path d="M 108 115 Q 106 108 101 104" stroke="#C8A45A" stroke-width="0.6" stroke-linecap="round" fill="none" opacity="0.72"/>
+        <path d="M 108 115 Q 110 108 115 104" stroke="#C8A45A" stroke-width="0.6" stroke-linecap="round" fill="none" opacity="0.72"/>
+        <circle cx="101" cy="104" r="1.1" fill="#C8A45A" opacity="0.72"/>
+        <circle cx="115" cy="104" r="1.1" fill="#C8A45A" opacity="0.72"/>
+        <!-- === GOLD POLLEN DOTS scattered === -->
+        <circle cx="54" cy="46" r="1.6" fill="#C8A45A" opacity="0.68"/>
+        <circle cx="88" cy="36" r="1.5" fill="#C8A45A" opacity="0.62"/>
+        <circle cx="152" cy="20" r="1.5" fill="#C8A45A" opacity="0.62"/>
+        <circle cx="70" cy="108" r="1.4" fill="#C8A45A" opacity="0.58"/>
+        <circle cx="100" cy="92" r="1.3" fill="#E2C47A" opacity="0.68"/>
+        <circle cx="142" cy="100" r="1.3" fill="#C8A45A" opacity="0.58"/>
+        <circle cx="90" cy="150" r="1.2" fill="#C8A45A" opacity="0.52"/>
+        <circle cx="178" cy="88" r="1.2" fill="#C8A45A" opacity="0.52"/>
+        <circle cx="36" cy="78" r="1.1" fill="#E2C47A" opacity="0.58"/>
+        <circle cx="120" cy="60" r="1.1" fill="#E2C47A" opacity="0.58"/>
+        <circle cx="46" cy="30" r="1.0" fill="#E2C47A" opacity="0.52"/>
+        <circle cx="160" cy="50" r="1.0" fill="#E2C47A" opacity="0.52"/>
+      </svg>
+      <!-- Corner TR (mirrored via CSS scaleX(-1)) -->
+      <svg class="corner-botanical corner-tr" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" fill="none">
+        <path d="M 12 12 C 38 44 65 82 82 120 C 98 156 104 200 106 258" stroke="#E2C47A" stroke-width="2.4" stroke-linecap="round" opacity="0.5"/>
+        <path d="M 40 56 C 76 42 118 30 170 18" stroke="#E2C47A" stroke-width="1.8" stroke-linecap="round" opacity="0.5"/>
+        <path d="M 76 118 C 114 102 154 92 196 84" stroke="#E2C47A" stroke-width="1.5" stroke-linecap="round" opacity="0.45"/>
+        <path d="M 60 90 C 90 73 126 58 166 46" stroke="#E2C47A" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+        <path d="M 12 12 C 38 44 65 82 82 120 C 98 156 104 200 106 258" stroke="#9DAF8E" stroke-width="1.7" stroke-linecap="round"/>
+        <path d="M 40 56 C 76 42 118 30 170 18" stroke="#9DAF8E" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M 76 118 C 114 102 154 92 196 84" stroke="#9DAF8E" stroke-width="1.0" stroke-linecap="round"/>
+        <path d="M 60 90 C 90 73 126 58 166 46" stroke="#9DAF8E" stroke-width="0.9" stroke-linecap="round" opacity="0.85"/>
+        <path d="M 32 56 Q 46 48 50 56 Q 42 64 32 56 Z" fill="#9DAF8E" opacity="0.7"/>
+        <path d="M 32 56 Q 18 48 14 56 Q 20 65 32 56 Z" fill="#9DAF8E" opacity="0.6"/>
+        <path d="M 32 56 L 48 50" stroke="#C8A45A" stroke-width="0.7" opacity="0.65"/>
+        <path d="M 58 96 Q 74 88 77 97 Q 69 105 58 96 Z" fill="#9DAF8E" opacity="0.7"/>
+        <path d="M 58 96 Q 43 88 40 97 Q 47 106 58 96 Z" fill="#9DAF8E" opacity="0.6"/>
+        <path d="M 58 96 L 75 90" stroke="#C8A45A" stroke-width="0.7" opacity="0.65"/>
+        <path d="M 76 132 Q 91 124 94 133 Q 87 142 76 132 Z" fill="#9DAF8E" opacity="0.68"/>
+        <path d="M 76 132 Q 61 124 58 133 Q 65 142 76 132 Z" fill="#9DAF8E" opacity="0.58"/>
+        <path d="M 88 165 Q 103 158 106 167 Q 99 175 88 165 Z" fill="#9DAF8E" opacity="0.62"/>
+        <path d="M 88 165 Q 73 158 70 167 Q 77 176 88 165 Z" fill="#9DAF8E" opacity="0.52"/>
+        <path d="M 72 42 Q 78 31 86 33 Q 83 40 72 42 Z" fill="#9DAF8E" opacity="0.72"/>
+        <path d="M 72 42 Q 78 53 86 51 Q 83 45 72 42 Z" fill="#9DAF8E" opacity="0.62"/>
+        <path d="M 72 42 L 84 35" stroke="#C8A45A" stroke-width="0.7" opacity="0.65"/>
+        <path d="M 106 32 Q 112 21 120 23 Q 117 30 106 32 Z" fill="#9DAF8E" opacity="0.72"/>
+        <path d="M 106 32 Q 112 43 120 41 Q 117 35 106 32 Z" fill="#9DAF8E" opacity="0.62"/>
+        <path d="M 106 32 L 118 25" stroke="#C8A45A" stroke-width="0.7" opacity="0.65"/>
+        <path d="M 142 24 Q 148 13 157 15 Q 153 22 142 24 Z" fill="#9DAF8E" opacity="0.72"/>
+        <path d="M 142 24 Q 148 35 157 33 Q 153 27 142 24 Z" fill="#9DAF8E" opacity="0.62"/>
+        <path d="M 142 24 L 154 17" stroke="#C8A45A" stroke-width="0.7" opacity="0.65"/>
+        <path d="M 114 104 Q 120 93 128 95 Q 125 103 114 104 Z" fill="#9DAF8E" opacity="0.65"/>
+        <path d="M 114 104 Q 120 115 128 113 Q 125 107 114 104 Z" fill="#9DAF8E" opacity="0.55"/>
+        <path d="M 156 96 Q 162 85 171 87 Q 168 95 156 96 Z" fill="#9DAF8E" opacity="0.65"/>
+        <path d="M 156 96 Q 162 107 171 105 Q 168 99 156 96 Z" fill="#9DAF8E" opacity="0.55"/>
+        <path d="M 97 78 Q 103 67 112 69 Q 108 77 97 78 Z" fill="#9DAF8E" opacity="0.62"/>
+        <path d="M 97 78 Q 103 89 112 87 Q 108 81 97 78 Z" fill="#9DAF8E" opacity="0.52"/>
+        <path d="M 136 62 Q 142 51 151 53 Q 147 61 136 62 Z" fill="#9DAF8E" opacity="0.62"/>
+        <path d="M 136 62 Q 142 73 151 71 Q 147 65 136 62 Z" fill="#9DAF8E" opacity="0.52"/>
+        <path d="M 20 20 Q 14 9 18 4 Q 24 8 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 28 9 33 12 Q 31 19 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 33 18 36 24 Q 30 28 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 28 30 25 35 Q 19 32 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 14 31 10 28 Q 12 22 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 7 21 5 15 Q 9 10 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 9 11 12 5 Q 17 7 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 14 9 18 4 Q 24 8 20 20 Z" fill="none" stroke="#E2C47A" stroke-width="0.55" opacity="0.65"/>
+        <path d="M 20 20 Q 28 9 33 12 Q 31 19 20 20 Z" fill="none" stroke="#E2C47A" stroke-width="0.55" opacity="0.65"/>
+        <path d="M 20 20 Q 33 18 36 24 Q 30 28 20 20 Z" fill="none" stroke="#E2C47A" stroke-width="0.55" opacity="0.65"/>
+        <path d="M 20 20 Q 28 30 25 35 Q 19 32 20 20 Z" fill="none" stroke="#E2C47A" stroke-width="0.55" opacity="0.65"/>
+        <path d="M 20 20 Q 7 21 5 15 Q 9 10 20 20 Z" fill="none" stroke="#E2C47A" stroke-width="0.55" opacity="0.65"/>
+        <path d="M 20 20 Q 16 13 19 9 Q 22 13 20 20 Z" fill="#EDD8D6" opacity="0.8"/>
+        <path d="M 20 20 Q 25 13 28 16 Q 25 19 20 20 Z" fill="#EDD8D6" opacity="0.8"/>
+        <path d="M 20 20 Q 27 22 26 27 Q 22 26 20 20 Z" fill="#EDD8D6" opacity="0.8"/>
+        <path d="M 20 20 Q 16 27 13 24 Q 14 20 20 20 Z" fill="#EDD8D6" opacity="0.8"/>
+        <circle cx="20" cy="20" r="5.5" fill="#C8A45A" opacity="0.55"/>
+        <circle cx="20" cy="20" r="3.5" fill="#E2C47A" opacity="0.72"/>
+        <circle cx="20" cy="20" r="1.8" fill="#F0D890" opacity="0.9"/>
+        <path d="M 170 18 Q 164 11 167 7 Q 173 11 170 18 Z" fill="#C4A29E" opacity="0.65"/>
+        <path d="M 170 18 Q 176 11 180 13 Q 178 18 170 18 Z" fill="#C4A29E" opacity="0.65"/>
+        <path d="M 170 18 Q 176 24 173 28 Q 168 25 170 18 Z" fill="#C4A29E" opacity="0.65"/>
+        <path d="M 170 18 Q 163 23 161 20 Q 162 15 170 18 Z" fill="#C4A29E" opacity="0.65"/>
+        <circle cx="170" cy="18" r="4" fill="#C8A45A" opacity="0.58"/>
+        <circle cx="170" cy="18" r="2.2" fill="#E2C47A" opacity="0.78"/>
+        <circle cx="170" cy="18" r="1" fill="#F0D890" opacity="0.95"/>
+        <path d="M 196 84 Q 190 77 193 73 Q 198 77 196 84 Z" fill="#C4A29E" opacity="0.6"/>
+        <path d="M 196 84 Q 202 77 206 80 Q 203 86 196 84 Z" fill="#C4A29E" opacity="0.6"/>
+        <path d="M 196 84 Q 202 91 198 95 Q 193 91 196 84 Z" fill="#C4A29E" opacity="0.6"/>
+        <path d="M 196 84 Q 188 91 186 87 Q 188 82 196 84 Z" fill="#C4A29E" opacity="0.6"/>
+        <circle cx="196" cy="84" r="3.5" fill="#C8A45A" opacity="0.6"/>
+        <circle cx="196" cy="84" r="2" fill="#E2C47A" opacity="0.8"/>
+        <path d="M 62 42 Q 76 30 86 34 Q 77 47 62 42 Z" fill="#C8A45A" opacity="0.52"/>
+        <path d="M 62 42 Q 46 31 42 37 Q 50 50 62 42 Z" fill="#C8A45A" opacity="0.44"/>
+        <path d="M 62 42 Q 74 52 72 62 Q 65 60 62 42 Z" fill="#E2C47A" opacity="0.44"/>
+        <path d="M 62 42 Q 46 52 44 60 Q 54 60 62 42 Z" fill="#E2C47A" opacity="0.38"/>
+        <path d="M 62 42 Q 76 30 86 34 Q 77 47 62 42 Z" fill="none" stroke="#E2C47A" stroke-width="0.5" opacity="0.65"/>
+        <path d="M 62 42 Q 46 31 42 37 Q 50 50 62 42 Z" fill="none" stroke="#E2C47A" stroke-width="0.5" opacity="0.65"/>
+        <ellipse cx="62" cy="42" rx="1.8" ry="5" fill="#C8A45A" opacity="0.88"/>
+        <path d="M 62 37 Q 59 29 54 25" stroke="#C8A45A" stroke-width="0.75" stroke-linecap="round" fill="none" opacity="0.78"/>
+        <path d="M 62 37 Q 65 29 70 25" stroke="#C8A45A" stroke-width="0.75" stroke-linecap="round" fill="none" opacity="0.78"/>
+        <circle cx="54" cy="25" r="1.4" fill="#C8A45A" opacity="0.8"/>
+        <circle cx="70" cy="25" r="1.4" fill="#C8A45A" opacity="0.8"/>
+        <path d="M 108 120 Q 119 112 125 115 Q 118 124 108 120 Z" fill="#C8A45A" opacity="0.48"/>
+        <path d="M 108 120 Q 97 112 93 116 Q 99 125 108 120 Z" fill="#C8A45A" opacity="0.4"/>
+        <path d="M 108 120 Q 117 128 115 135 Q 110 132 108 120 Z" fill="#E2C47A" opacity="0.4"/>
+        <path d="M 108 120 Q 99 128 97 133 Q 103 132 108 120 Z" fill="#E2C47A" opacity="0.34"/>
+        <ellipse cx="108" cy="120" rx="1.5" ry="4.5" fill="#C8A45A" opacity="0.82"/>
+        <path d="M 108 115 Q 106 108 101 104" stroke="#C8A45A" stroke-width="0.6" stroke-linecap="round" fill="none" opacity="0.72"/>
+        <path d="M 108 115 Q 110 108 115 104" stroke="#C8A45A" stroke-width="0.6" stroke-linecap="round" fill="none" opacity="0.72"/>
+        <circle cx="101" cy="104" r="1.1" fill="#C8A45A" opacity="0.72"/>
+        <circle cx="115" cy="104" r="1.1" fill="#C8A45A" opacity="0.72"/>
+        <circle cx="54" cy="46" r="1.6" fill="#C8A45A" opacity="0.68"/>
+        <circle cx="88" cy="36" r="1.5" fill="#C8A45A" opacity="0.62"/>
+        <circle cx="152" cy="20" r="1.5" fill="#C8A45A" opacity="0.62"/>
+        <circle cx="70" cy="108" r="1.4" fill="#C8A45A" opacity="0.58"/>
+        <circle cx="100" cy="92" r="1.3" fill="#E2C47A" opacity="0.68"/>
+        <circle cx="142" cy="100" r="1.3" fill="#C8A45A" opacity="0.58"/>
+        <circle cx="90" cy="150" r="1.2" fill="#C8A45A" opacity="0.52"/>
+        <circle cx="178" cy="88" r="1.2" fill="#C8A45A" opacity="0.52"/>
+        <circle cx="36" cy="78" r="1.1" fill="#E2C47A" opacity="0.58"/>
+        <circle cx="120" cy="60" r="1.1" fill="#E2C47A" opacity="0.58"/>
+        <circle cx="46" cy="30" r="1.0" fill="#E2C47A" opacity="0.52"/>
+        <circle cx="160" cy="50" r="1.0" fill="#E2C47A" opacity="0.52"/>
+      </svg>
+      <!-- Corner BL -->
+      <svg class="corner-botanical corner-bl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" fill="none">
+        <path d="M 12 12 C 38 44 65 82 82 120 C 98 156 104 200 106 258" stroke="#E2C47A" stroke-width="2.4" stroke-linecap="round" opacity="0.5"/>
+        <path d="M 40 56 C 76 42 118 30 170 18" stroke="#E2C47A" stroke-width="1.8" stroke-linecap="round" opacity="0.5"/>
+        <path d="M 76 118 C 114 102 154 92 196 84" stroke="#E2C47A" stroke-width="1.5" stroke-linecap="round" opacity="0.45"/>
+        <path d="M 60 90 C 90 73 126 58 166 46" stroke="#E2C47A" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+        <path d="M 12 12 C 38 44 65 82 82 120 C 98 156 104 200 106 258" stroke="#9DAF8E" stroke-width="1.7" stroke-linecap="round"/>
+        <path d="M 40 56 C 76 42 118 30 170 18" stroke="#9DAF8E" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M 76 118 C 114 102 154 92 196 84" stroke="#9DAF8E" stroke-width="1.0" stroke-linecap="round"/>
+        <path d="M 60 90 C 90 73 126 58 166 46" stroke="#9DAF8E" stroke-width="0.9" stroke-linecap="round" opacity="0.85"/>
+        <path d="M 32 56 Q 46 48 50 56 Q 42 64 32 56 Z" fill="#9DAF8E" opacity="0.7"/>
+        <path d="M 32 56 Q 18 48 14 56 Q 20 65 32 56 Z" fill="#9DAF8E" opacity="0.6"/>
+        <path d="M 32 56 L 48 50" stroke="#C8A45A" stroke-width="0.7" opacity="0.65"/>
+        <path d="M 58 96 Q 74 88 77 97 Q 69 105 58 96 Z" fill="#9DAF8E" opacity="0.7"/>
+        <path d="M 58 96 Q 43 88 40 97 Q 47 106 58 96 Z" fill="#9DAF8E" opacity="0.6"/>
+        <path d="M 58 96 L 75 90" stroke="#C8A45A" stroke-width="0.7" opacity="0.65"/>
+        <path d="M 76 132 Q 91 124 94 133 Q 87 142 76 132 Z" fill="#9DAF8E" opacity="0.68"/>
+        <path d="M 76 132 Q 61 124 58 133 Q 65 142 76 132 Z" fill="#9DAF8E" opacity="0.58"/>
+        <path d="M 88 165 Q 103 158 106 167 Q 99 175 88 165 Z" fill="#9DAF8E" opacity="0.62"/>
+        <path d="M 88 165 Q 73 158 70 167 Q 77 176 88 165 Z" fill="#9DAF8E" opacity="0.52"/>
+        <path d="M 72 42 Q 78 31 86 33 Q 83 40 72 42 Z" fill="#9DAF8E" opacity="0.72"/>
+        <path d="M 72 42 Q 78 53 86 51 Q 83 45 72 42 Z" fill="#9DAF8E" opacity="0.62"/>
+        <path d="M 72 42 L 84 35" stroke="#C8A45A" stroke-width="0.7" opacity="0.65"/>
+        <path d="M 106 32 Q 112 21 120 23 Q 117 30 106 32 Z" fill="#9DAF8E" opacity="0.72"/>
+        <path d="M 106 32 Q 112 43 120 41 Q 117 35 106 32 Z" fill="#9DAF8E" opacity="0.62"/>
+        <path d="M 106 32 L 118 25" stroke="#C8A45A" stroke-width="0.7" opacity="0.65"/>
+        <path d="M 142 24 Q 148 13 157 15 Q 153 22 142 24 Z" fill="#9DAF8E" opacity="0.72"/>
+        <path d="M 142 24 Q 148 35 157 33 Q 153 27 142 24 Z" fill="#9DAF8E" opacity="0.62"/>
+        <path d="M 142 24 L 154 17" stroke="#C8A45A" stroke-width="0.7" opacity="0.65"/>
+        <path d="M 114 104 Q 120 93 128 95 Q 125 103 114 104 Z" fill="#9DAF8E" opacity="0.65"/>
+        <path d="M 114 104 Q 120 115 128 113 Q 125 107 114 104 Z" fill="#9DAF8E" opacity="0.55"/>
+        <path d="M 156 96 Q 162 85 171 87 Q 168 95 156 96 Z" fill="#9DAF8E" opacity="0.65"/>
+        <path d="M 156 96 Q 162 107 171 105 Q 168 99 156 96 Z" fill="#9DAF8E" opacity="0.55"/>
+        <path d="M 97 78 Q 103 67 112 69 Q 108 77 97 78 Z" fill="#9DAF8E" opacity="0.62"/>
+        <path d="M 97 78 Q 103 89 112 87 Q 108 81 97 78 Z" fill="#9DAF8E" opacity="0.52"/>
+        <path d="M 136 62 Q 142 51 151 53 Q 147 61 136 62 Z" fill="#9DAF8E" opacity="0.62"/>
+        <path d="M 136 62 Q 142 73 151 71 Q 147 65 136 62 Z" fill="#9DAF8E" opacity="0.52"/>
+        <path d="M 20 20 Q 14 9 18 4 Q 24 8 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 28 9 33 12 Q 31 19 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 33 18 36 24 Q 30 28 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 28 30 25 35 Q 19 32 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 14 31 10 28 Q 12 22 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 7 21 5 15 Q 9 10 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 9 11 12 5 Q 17 7 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 14 9 18 4 Q 24 8 20 20 Z" fill="none" stroke="#E2C47A" stroke-width="0.55" opacity="0.65"/>
+        <path d="M 20 20 Q 28 9 33 12 Q 31 19 20 20 Z" fill="none" stroke="#E2C47A" stroke-width="0.55" opacity="0.65"/>
+        <path d="M 20 20 Q 33 18 36 24 Q 30 28 20 20 Z" fill="none" stroke="#E2C47A" stroke-width="0.55" opacity="0.65"/>
+        <path d="M 20 20 Q 28 30 25 35 Q 19 32 20 20 Z" fill="none" stroke="#E2C47A" stroke-width="0.55" opacity="0.65"/>
+        <path d="M 20 20 Q 7 21 5 15 Q 9 10 20 20 Z" fill="none" stroke="#E2C47A" stroke-width="0.55" opacity="0.65"/>
+        <path d="M 20 20 Q 16 13 19 9 Q 22 13 20 20 Z" fill="#EDD8D6" opacity="0.8"/>
+        <path d="M 20 20 Q 25 13 28 16 Q 25 19 20 20 Z" fill="#EDD8D6" opacity="0.8"/>
+        <path d="M 20 20 Q 27 22 26 27 Q 22 26 20 20 Z" fill="#EDD8D6" opacity="0.8"/>
+        <path d="M 20 20 Q 16 27 13 24 Q 14 20 20 20 Z" fill="#EDD8D6" opacity="0.8"/>
+        <circle cx="20" cy="20" r="5.5" fill="#C8A45A" opacity="0.55"/>
+        <circle cx="20" cy="20" r="3.5" fill="#E2C47A" opacity="0.72"/>
+        <circle cx="20" cy="20" r="1.8" fill="#F0D890" opacity="0.9"/>
+        <path d="M 170 18 Q 164 11 167 7 Q 173 11 170 18 Z" fill="#C4A29E" opacity="0.65"/>
+        <path d="M 170 18 Q 176 11 180 13 Q 178 18 170 18 Z" fill="#C4A29E" opacity="0.65"/>
+        <path d="M 170 18 Q 176 24 173 28 Q 168 25 170 18 Z" fill="#C4A29E" opacity="0.65"/>
+        <path d="M 170 18 Q 163 23 161 20 Q 162 15 170 18 Z" fill="#C4A29E" opacity="0.65"/>
+        <circle cx="170" cy="18" r="4" fill="#C8A45A" opacity="0.58"/>
+        <circle cx="170" cy="18" r="2.2" fill="#E2C47A" opacity="0.78"/>
+        <circle cx="170" cy="18" r="1" fill="#F0D890" opacity="0.95"/>
+        <path d="M 196 84 Q 190 77 193 73 Q 198 77 196 84 Z" fill="#C4A29E" opacity="0.6"/>
+        <path d="M 196 84 Q 202 77 206 80 Q 203 86 196 84 Z" fill="#C4A29E" opacity="0.6"/>
+        <path d="M 196 84 Q 202 91 198 95 Q 193 91 196 84 Z" fill="#C4A29E" opacity="0.6"/>
+        <path d="M 196 84 Q 188 91 186 87 Q 188 82 196 84 Z" fill="#C4A29E" opacity="0.6"/>
+        <circle cx="196" cy="84" r="3.5" fill="#C8A45A" opacity="0.6"/>
+        <circle cx="196" cy="84" r="2" fill="#E2C47A" opacity="0.8"/>
+        <path d="M 62 42 Q 76 30 86 34 Q 77 47 62 42 Z" fill="#C8A45A" opacity="0.52"/>
+        <path d="M 62 42 Q 46 31 42 37 Q 50 50 62 42 Z" fill="#C8A45A" opacity="0.44"/>
+        <path d="M 62 42 Q 74 52 72 62 Q 65 60 62 42 Z" fill="#E2C47A" opacity="0.44"/>
+        <path d="M 62 42 Q 46 52 44 60 Q 54 60 62 42 Z" fill="#E2C47A" opacity="0.38"/>
+        <path d="M 62 42 Q 76 30 86 34 Q 77 47 62 42 Z" fill="none" stroke="#E2C47A" stroke-width="0.5" opacity="0.65"/>
+        <path d="M 62 42 Q 46 31 42 37 Q 50 50 62 42 Z" fill="none" stroke="#E2C47A" stroke-width="0.5" opacity="0.65"/>
+        <ellipse cx="62" cy="42" rx="1.8" ry="5" fill="#C8A45A" opacity="0.88"/>
+        <path d="M 62 37 Q 59 29 54 25" stroke="#C8A45A" stroke-width="0.75" stroke-linecap="round" fill="none" opacity="0.78"/>
+        <path d="M 62 37 Q 65 29 70 25" stroke="#C8A45A" stroke-width="0.75" stroke-linecap="round" fill="none" opacity="0.78"/>
+        <circle cx="54" cy="25" r="1.4" fill="#C8A45A" opacity="0.8"/>
+        <circle cx="70" cy="25" r="1.4" fill="#C8A45A" opacity="0.8"/>
+        <path d="M 108 120 Q 119 112 125 115 Q 118 124 108 120 Z" fill="#C8A45A" opacity="0.48"/>
+        <path d="M 108 120 Q 97 112 93 116 Q 99 125 108 120 Z" fill="#C8A45A" opacity="0.4"/>
+        <path d="M 108 120 Q 117 128 115 135 Q 110 132 108 120 Z" fill="#E2C47A" opacity="0.4"/>
+        <path d="M 108 120 Q 99 128 97 133 Q 103 132 108 120 Z" fill="#E2C47A" opacity="0.34"/>
+        <ellipse cx="108" cy="120" rx="1.5" ry="4.5" fill="#C8A45A" opacity="0.82"/>
+        <path d="M 108 115 Q 106 108 101 104" stroke="#C8A45A" stroke-width="0.6" stroke-linecap="round" fill="none" opacity="0.72"/>
+        <path d="M 108 115 Q 110 108 115 104" stroke="#C8A45A" stroke-width="0.6" stroke-linecap="round" fill="none" opacity="0.72"/>
+        <circle cx="101" cy="104" r="1.1" fill="#C8A45A" opacity="0.72"/>
+        <circle cx="115" cy="104" r="1.1" fill="#C8A45A" opacity="0.72"/>
+        <circle cx="54" cy="46" r="1.6" fill="#C8A45A" opacity="0.68"/>
+        <circle cx="88" cy="36" r="1.5" fill="#C8A45A" opacity="0.62"/>
+        <circle cx="152" cy="20" r="1.5" fill="#C8A45A" opacity="0.62"/>
+        <circle cx="70" cy="108" r="1.4" fill="#C8A45A" opacity="0.58"/>
+        <circle cx="100" cy="92" r="1.3" fill="#E2C47A" opacity="0.68"/>
+        <circle cx="142" cy="100" r="1.3" fill="#C8A45A" opacity="0.58"/>
+        <circle cx="90" cy="150" r="1.2" fill="#C8A45A" opacity="0.52"/>
+        <circle cx="178" cy="88" r="1.2" fill="#C8A45A" opacity="0.52"/>
+        <circle cx="36" cy="78" r="1.1" fill="#E2C47A" opacity="0.58"/>
+        <circle cx="120" cy="60" r="1.1" fill="#E2C47A" opacity="0.58"/>
+        <circle cx="46" cy="30" r="1.0" fill="#E2C47A" opacity="0.52"/>
+        <circle cx="160" cy="50" r="1.0" fill="#E2C47A" opacity="0.52"/>
+      </svg>
+      <!-- Corner BR -->
+      <svg class="corner-botanical corner-br" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" fill="none">
+        <path d="M 12 12 C 38 44 65 82 82 120 C 98 156 104 200 106 258" stroke="#E2C47A" stroke-width="2.4" stroke-linecap="round" opacity="0.5"/>
+        <path d="M 40 56 C 76 42 118 30 170 18" stroke="#E2C47A" stroke-width="1.8" stroke-linecap="round" opacity="0.5"/>
+        <path d="M 76 118 C 114 102 154 92 196 84" stroke="#E2C47A" stroke-width="1.5" stroke-linecap="round" opacity="0.45"/>
+        <path d="M 60 90 C 90 73 126 58 166 46" stroke="#E2C47A" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+        <path d="M 12 12 C 38 44 65 82 82 120 C 98 156 104 200 106 258" stroke="#9DAF8E" stroke-width="1.7" stroke-linecap="round"/>
+        <path d="M 40 56 C 76 42 118 30 170 18" stroke="#9DAF8E" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M 76 118 C 114 102 154 92 196 84" stroke="#9DAF8E" stroke-width="1.0" stroke-linecap="round"/>
+        <path d="M 60 90 C 90 73 126 58 166 46" stroke="#9DAF8E" stroke-width="0.9" stroke-linecap="round" opacity="0.85"/>
+        <path d="M 32 56 Q 46 48 50 56 Q 42 64 32 56 Z" fill="#9DAF8E" opacity="0.7"/>
+        <path d="M 32 56 Q 18 48 14 56 Q 20 65 32 56 Z" fill="#9DAF8E" opacity="0.6"/>
+        <path d="M 32 56 L 48 50" stroke="#C8A45A" stroke-width="0.7" opacity="0.65"/>
+        <path d="M 58 96 Q 74 88 77 97 Q 69 105 58 96 Z" fill="#9DAF8E" opacity="0.7"/>
+        <path d="M 58 96 Q 43 88 40 97 Q 47 106 58 96 Z" fill="#9DAF8E" opacity="0.6"/>
+        <path d="M 58 96 L 75 90" stroke="#C8A45A" stroke-width="0.7" opacity="0.65"/>
+        <path d="M 76 132 Q 91 124 94 133 Q 87 142 76 132 Z" fill="#9DAF8E" opacity="0.68"/>
+        <path d="M 76 132 Q 61 124 58 133 Q 65 142 76 132 Z" fill="#9DAF8E" opacity="0.58"/>
+        <path d="M 88 165 Q 103 158 106 167 Q 99 175 88 165 Z" fill="#9DAF8E" opacity="0.62"/>
+        <path d="M 88 165 Q 73 158 70 167 Q 77 176 88 165 Z" fill="#9DAF8E" opacity="0.52"/>
+        <path d="M 72 42 Q 78 31 86 33 Q 83 40 72 42 Z" fill="#9DAF8E" opacity="0.72"/>
+        <path d="M 72 42 Q 78 53 86 51 Q 83 45 72 42 Z" fill="#9DAF8E" opacity="0.62"/>
+        <path d="M 72 42 L 84 35" stroke="#C8A45A" stroke-width="0.7" opacity="0.65"/>
+        <path d="M 106 32 Q 112 21 120 23 Q 117 30 106 32 Z" fill="#9DAF8E" opacity="0.72"/>
+        <path d="M 106 32 Q 112 43 120 41 Q 117 35 106 32 Z" fill="#9DAF8E" opacity="0.62"/>
+        <path d="M 106 32 L 118 25" stroke="#C8A45A" stroke-width="0.7" opacity="0.65"/>
+        <path d="M 142 24 Q 148 13 157 15 Q 153 22 142 24 Z" fill="#9DAF8E" opacity="0.72"/>
+        <path d="M 142 24 Q 148 35 157 33 Q 153 27 142 24 Z" fill="#9DAF8E" opacity="0.62"/>
+        <path d="M 142 24 L 154 17" stroke="#C8A45A" stroke-width="0.7" opacity="0.65"/>
+        <path d="M 114 104 Q 120 93 128 95 Q 125 103 114 104 Z" fill="#9DAF8E" opacity="0.65"/>
+        <path d="M 114 104 Q 120 115 128 113 Q 125 107 114 104 Z" fill="#9DAF8E" opacity="0.55"/>
+        <path d="M 156 96 Q 162 85 171 87 Q 168 95 156 96 Z" fill="#9DAF8E" opacity="0.65"/>
+        <path d="M 156 96 Q 162 107 171 105 Q 168 99 156 96 Z" fill="#9DAF8E" opacity="0.55"/>
+        <path d="M 97 78 Q 103 67 112 69 Q 108 77 97 78 Z" fill="#9DAF8E" opacity="0.62"/>
+        <path d="M 97 78 Q 103 89 112 87 Q 108 81 97 78 Z" fill="#9DAF8E" opacity="0.52"/>
+        <path d="M 136 62 Q 142 51 151 53 Q 147 61 136 62 Z" fill="#9DAF8E" opacity="0.62"/>
+        <path d="M 136 62 Q 142 73 151 71 Q 147 65 136 62 Z" fill="#9DAF8E" opacity="0.52"/>
+        <path d="M 20 20 Q 14 9 18 4 Q 24 8 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 28 9 33 12 Q 31 19 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 33 18 36 24 Q 30 28 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 28 30 25 35 Q 19 32 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 14 31 10 28 Q 12 22 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 7 21 5 15 Q 9 10 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 9 11 12 5 Q 17 7 20 20 Z" fill="#C4A29E" opacity="0.62"/>
+        <path d="M 20 20 Q 14 9 18 4 Q 24 8 20 20 Z" fill="none" stroke="#E2C47A" stroke-width="0.55" opacity="0.65"/>
+        <path d="M 20 20 Q 28 9 33 12 Q 31 19 20 20 Z" fill="none" stroke="#E2C47A" stroke-width="0.55" opacity="0.65"/>
+        <path d="M 20 20 Q 33 18 36 24 Q 30 28 20 20 Z" fill="none" stroke="#E2C47A" stroke-width="0.55" opacity="0.65"/>
+        <path d="M 20 20 Q 28 30 25 35 Q 19 32 20 20 Z" fill="none" stroke="#E2C47A" stroke-width="0.55" opacity="0.65"/>
+        <path d="M 20 20 Q 7 21 5 15 Q 9 10 20 20 Z" fill="none" stroke="#E2C47A" stroke-width="0.55" opacity="0.65"/>
+        <path d="M 20 20 Q 16 13 19 9 Q 22 13 20 20 Z" fill="#EDD8D6" opacity="0.8"/>
+        <path d="M 20 20 Q 25 13 28 16 Q 25 19 20 20 Z" fill="#EDD8D6" opacity="0.8"/>
+        <path d="M 20 20 Q 27 22 26 27 Q 22 26 20 20 Z" fill="#EDD8D6" opacity="0.8"/>
+        <path d="M 20 20 Q 16 27 13 24 Q 14 20 20 20 Z" fill="#EDD8D6" opacity="0.8"/>
+        <circle cx="20" cy="20" r="5.5" fill="#C8A45A" opacity="0.55"/>
+        <circle cx="20" cy="20" r="3.5" fill="#E2C47A" opacity="0.72"/>
+        <circle cx="20" cy="20" r="1.8" fill="#F0D890" opacity="0.9"/>
+        <path d="M 170 18 Q 164 11 167 7 Q 173 11 170 18 Z" fill="#C4A29E" opacity="0.65"/>
+        <path d="M 170 18 Q 176 11 180 13 Q 178 18 170 18 Z" fill="#C4A29E" opacity="0.65"/>
+        <path d="M 170 18 Q 176 24 173 28 Q 168 25 170 18 Z" fill="#C4A29E" opacity="0.65"/>
+        <path d="M 170 18 Q 163 23 161 20 Q 162 15 170 18 Z" fill="#C4A29E" opacity="0.65"/>
+        <circle cx="170" cy="18" r="4" fill="#C8A45A" opacity="0.58"/>
+        <circle cx="170" cy="18" r="2.2" fill="#E2C47A" opacity="0.78"/>
+        <circle cx="170" cy="18" r="1" fill="#F0D890" opacity="0.95"/>
+        <path d="M 196 84 Q 190 77 193 73 Q 198 77 196 84 Z" fill="#C4A29E" opacity="0.6"/>
+        <path d="M 196 84 Q 202 77 206 80 Q 203 86 196 84 Z" fill="#C4A29E" opacity="0.6"/>
+        <path d="M 196 84 Q 202 91 198 95 Q 193 91 196 84 Z" fill="#C4A29E" opacity="0.6"/>
+        <path d="M 196 84 Q 188 91 186 87 Q 188 82 196 84 Z" fill="#C4A29E" opacity="0.6"/>
+        <circle cx="196" cy="84" r="3.5" fill="#C8A45A" opacity="0.6"/>
+        <circle cx="196" cy="84" r="2" fill="#E2C47A" opacity="0.8"/>
+        <path d="M 62 42 Q 76 30 86 34 Q 77 47 62 42 Z" fill="#C8A45A" opacity="0.52"/>
+        <path d="M 62 42 Q 46 31 42 37 Q 50 50 62 42 Z" fill="#C8A45A" opacity="0.44"/>
+        <path d="M 62 42 Q 74 52 72 62 Q 65 60 62 42 Z" fill="#E2C47A" opacity="0.44"/>
+        <path d="M 62 42 Q 46 52 44 60 Q 54 60 62 42 Z" fill="#E2C47A" opacity="0.38"/>
+        <path d="M 62 42 Q 76 30 86 34 Q 77 47 62 42 Z" fill="none" stroke="#E2C47A" stroke-width="0.5" opacity="0.65"/>
+        <path d="M 62 42 Q 46 31 42 37 Q 50 50 62 42 Z" fill="none" stroke="#E2C47A" stroke-width="0.5" opacity="0.65"/>
+        <ellipse cx="62" cy="42" rx="1.8" ry="5" fill="#C8A45A" opacity="0.88"/>
+        <path d="M 62 37 Q 59 29 54 25" stroke="#C8A45A" stroke-width="0.75" stroke-linecap="round" fill="none" opacity="0.78"/>
+        <path d="M 62 37 Q 65 29 70 25" stroke="#C8A45A" stroke-width="0.75" stroke-linecap="round" fill="none" opacity="0.78"/>
+        <circle cx="54" cy="25" r="1.4" fill="#C8A45A" opacity="0.8"/>
+        <circle cx="70" cy="25" r="1.4" fill="#C8A45A" opacity="0.8"/>
+        <path d="M 108 120 Q 119 112 125 115 Q 118 124 108 120 Z" fill="#C8A45A" opacity="0.48"/>
+        <path d="M 108 120 Q 97 112 93 116 Q 99 125 108 120 Z" fill="#C8A45A" opacity="0.4"/>
+        <path d="M 108 120 Q 117 128 115 135 Q 110 132 108 120 Z" fill="#E2C47A" opacity="0.4"/>
+        <path d="M 108 120 Q 99 128 97 133 Q 103 132 108 120 Z" fill="#E2C47A" opacity="0.34"/>
+        <ellipse cx="108" cy="120" rx="1.5" ry="4.5" fill="#C8A45A" opacity="0.82"/>
+        <path d="M 108 115 Q 106 108 101 104" stroke="#C8A45A" stroke-width="0.6" stroke-linecap="round" fill="none" opacity="0.72"/>
+        <path d="M 108 115 Q 110 108 115 104" stroke="#C8A45A" stroke-width="0.6" stroke-linecap="round" fill="none" opacity="0.72"/>
+        <circle cx="101" cy="104" r="1.1" fill="#C8A45A" opacity="0.72"/>
+        <circle cx="115" cy="104" r="1.1" fill="#C8A45A" opacity="0.72"/>
+        <circle cx="54" cy="46" r="1.6" fill="#C8A45A" opacity="0.68"/>
+        <circle cx="88" cy="36" r="1.5" fill="#C8A45A" opacity="0.62"/>
+        <circle cx="152" cy="20" r="1.5" fill="#C8A45A" opacity="0.62"/>
+        <circle cx="70" cy="108" r="1.4" fill="#C8A45A" opacity="0.58"/>
+        <circle cx="100" cy="92" r="1.3" fill="#E2C47A" opacity="0.68"/>
+        <circle cx="142" cy="100" r="1.3" fill="#C8A45A" opacity="0.58"/>
+        <circle cx="90" cy="150" r="1.2" fill="#C8A45A" opacity="0.52"/>
+        <circle cx="178" cy="88" r="1.2" fill="#C8A45A" opacity="0.52"/>
+        <circle cx="36" cy="78" r="1.1" fill="#E2C47A" opacity="0.58"/>
+        <circle cx="120" cy="60" r="1.1" fill="#E2C47A" opacity="0.58"/>
+        <circle cx="46" cy="30" r="1.0" fill="#E2C47A" opacity="0.52"/>
+        <circle cx="160" cy="50" r="1.0" fill="#E2C47A" opacity="0.52"/>
+      </svg>
+    </div>
 
-    <h1 class="hero-names">
-      <span class="bride">Lovely</span>
-      <span class="amp">&amp;</span>
-      <span class="groom">Gaurav</span>
-    </h1>
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <p class="hero-eyebrow">Together Forever &bull; A Wedding Celebration</p>
 
-    <div class="hero-rule" aria-hidden="true"></div>
-    <p class="hero-date">23 — 29 &nbsp; November &nbsp; 2026</p>
-    <p class="hero-location">Kota, Rajasthan &nbsp;•&nbsp; Pathankot, Punjab</p>
+      <h1 class="hero-names">
+        <span class="bride gold-shimmer">Lovely</span>
+        <span class="amp">&amp;</span>
+        <span class="groom gold-shimmer">Gaurav</span>
+      </h1>
 
-    <!-- Countdown -->
-    <div class="hero-countdown" aria-label="Countdown to wedding">
-      <div class="cd-unit">
-        <span class="cd-num" id="cdDays">000</span>
-        <span class="cd-label">Days</span>
+      <div class="hero-rule" aria-hidden="true"></div>
+      <p class="hero-date">23 &mdash; 29 &nbsp; November &nbsp; 2026</p>
+      <p class="hero-location">Kota, Rajasthan &nbsp;&bull;&nbsp; Pathankot, Punjab</p>
+
+      <!-- Sprig divider -->
+      <div style="margin: 28px auto 0; opacity: 0; animation: heroFadeUp 1s ease 1.6s forwards;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 40" width="320" height="40" fill="none" aria-hidden="true" style="max-width:100%;">
+          <path d="M 40 20 C 90 20 140 20 160 20 C 180 20 230 20 280 20" stroke="#9DAF8E" stroke-width="1" opacity="0.6"/>
+          <path d="M 90 20 C 85 10 92 6 98 14 Q 96 18 90 20 Z" fill="#9DAF8E" opacity="0.6"/>
+          <path d="M 90 20 C 85 30 92 34 98 26 Q 96 22 90 20 Z" fill="#9DAF8E" opacity="0.6"/>
+          <path d="M 125 20 C 122 11 129 7 133 16 Q 130 19 125 20 Z" fill="#9DAF8E" opacity="0.6"/>
+          <path d="M 125 20 C 122 29 129 33 133 24 Q 130 21 125 20 Z" fill="#9DAF8E" opacity="0.6"/>
+          <path d="M 230 20 C 225 10 232 6 238 14 Q 236 18 230 20 Z" fill="#9DAF8E" opacity="0.6"/>
+          <path d="M 230 20 C 225 30 232 34 238 26 Q 236 22 230 20 Z" fill="#9DAF8E" opacity="0.6"/>
+          <path d="M 195 20 C 192 11 199 7 203 16 Q 200 19 195 20 Z" fill="#9DAF8E" opacity="0.6"/>
+          <path d="M 195 20 C 192 29 199 33 203 24 Q 200 21 195 20 Z" fill="#9DAF8E" opacity="0.6"/>
+          <circle cx="160" cy="20" r="8" fill="#C4A29E" opacity="0.35"/>
+          <circle cx="160" cy="20" r="5.5" fill="#C4A29E" opacity="0.5"/>
+          <circle cx="160" cy="20" r="3" fill="#C4A29E" opacity="0.7"/>
+          <circle cx="160" cy="20" r="1.5" fill="#C4A29E" opacity="0.9"/>
+          <circle cx="148" cy="20" r="1.5" fill="#C8A45A" opacity="0.6"/>
+          <circle cx="172" cy="20" r="1.5" fill="#C8A45A" opacity="0.6"/>
+          <circle cx="42" cy="20" r="2" fill="#9DAF8E" opacity="0.4"/>
+          <circle cx="278" cy="20" r="2" fill="#9DAF8E" opacity="0.4"/>
+        </svg>
       </div>
-      <span class="cd-colon" aria-hidden="true">:</span>
-      <div class="cd-unit">
-        <span class="cd-num" id="cdHours">00</span>
-        <span class="cd-label">Hours</span>
-      </div>
-      <span class="cd-colon" aria-hidden="true">:</span>
-      <div class="cd-unit">
-        <span class="cd-num" id="cdMins">00</span>
-        <span class="cd-label">Mins</span>
-      </div>
-      <span class="cd-colon" aria-hidden="true">:</span>
-      <div class="cd-unit">
-        <span class="cd-num" id="cdSecs">00</span>
-        <span class="cd-label">Secs</span>
+
+      <!-- Countdown -->
+      <div class="hero-countdown" aria-label="Countdown to wedding">
+        <div class="cd-unit">
+          <span class="cd-num" id="cdDays">000</span>
+          <span class="cd-label">Days</span>
+        </div>
+        <span class="cd-colon" aria-hidden="true">:</span>
+        <div class="cd-unit">
+          <span class="cd-num" id="cdHours">00</span>
+          <span class="cd-label">Hours</span>
+        </div>
+        <span class="cd-colon" aria-hidden="true">:</span>
+        <div class="cd-unit">
+          <span class="cd-num" id="cdMins">00</span>
+          <span class="cd-label">Mins</span>
+        </div>
+        <span class="cd-colon" aria-hidden="true">:</span>
+        <div class="cd-unit">
+          <span class="cd-num" id="cdSecs">00</span>
+          <span class="cd-label">Secs</span>
+        </div>
       </div>
     </div>
 
-    <div class="hero-scroll" aria-hidden="true">
-      <span>Scroll</span>
-      <div class="hero-scroll-mouse"></div>
-    </div>
   </section>
 
   <!-- ================================================
        COUPLE STORY
        ================================================ -->
-  <section class="sec-story" id="story" aria-label="Our Story">
+  <section class="sec" id="story" aria-label="Our Story">
     <div class="container">
-      <p class="section-label sr">Our Love Story</p>
+      <span class="section-label sr">Our Love Story</span>
       <h2 class="section-title sr">Two Souls, One Destiny</h2>
       <div class="gold-rule sr" aria-hidden="true"></div>
       <p class="section-sub sr">From the first glance to forever — a journey filled with laughter, dreams and boundless love</p>
 
-      <div class="story-grid">
-        <div class="story-img-wrap sr sr-left">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center;" class="story-grid-wrap">
+        <style>
+          @media (max-width: 860px) {
+            .story-grid-wrap { grid-template-columns: 1fr !important; gap: 40px !important; }
+            .story-img-wrap { aspect-ratio: 16/9 !important; max-height: 280px !important; }
+          }
+        </style>
+
+        <div class="story-img-wrap sr sr-left" style="position:relative;border-radius:8px;overflow:hidden;aspect-ratio:3/4;">
           <img
             src="https://images.unsplash.com/photo-1519741497674-611481863552?w=700&q=85"
             alt="Lovely and Gaurav — couple photograph"
             loading="lazy"
+            style="width:100%;height:100%;object-fit:cover;transition:transform 0.8s ease;"
           />
-          <div class="story-img-frame" aria-hidden="true"></div>
+          <div aria-hidden="true" style="position:absolute;inset:14px;border:1px solid rgba(200,164,90,0.4);border-radius:6px;pointer-events:none;"></div>
         </div>
 
-        <div class="story-text sr sr-right">
-          <h3>When Stars Aligned in Rajasthan</h3>
-          <p>
+        <div class="sr sr-right">
+          <h3 style="font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:600;color:var(--brown);line-height:1.3;margin-bottom:24px;">When Stars Aligned in Rajasthan</h3>
+          <p style="color:var(--brown-mid);line-height:1.95;margin-bottom:20px;">
             What begins as a chance meeting blossoms into the most beautiful adventure of two lives. Lovely and Gaurav found in each other not just a partner, but a home — a place of warmth, laughter, and unconditional love.
           </p>
-          <p>
+          <p style="color:var(--brown-mid);line-height:1.95;margin-bottom:20px;">
             From stolen glances to shared dreams, from long phone calls to longer silences that needed no words — their journey has been nothing short of magical. Every moment together has been a story worth telling.
           </p>
-          <p>
+          <p style="color:var(--brown-mid);line-height:1.95;margin-bottom:0;">
             And now, they invite <em>you</em> — their most cherished family and friends — to witness the most beautiful chapter yet: the beginning of forever.
           </p>
 
-          <div class="story-stats">
-            <div class="stat-item">
-              <span class="stat-num">∞</span>
-              <span class="stat-label">Love</span>
+          <div style="display:flex;gap:28px;margin-top:40px;padding-top:32px;border-top:1px solid var(--border);">
+            <div style="text-align:center;">
+              <span style="font-family:var(--font-display);font-size:2.2rem;color:var(--gold-dark);display:block;line-height:1;">&#8734;</span>
+              <span style="font-size:0.66rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--brown-light);margin-top:5px;display:block;font-weight:700;">Love</span>
             </div>
-            <div class="stat-item">
-              <span class="stat-num">7</span>
-              <span class="stat-label">Days</span>
+            <div style="text-align:center;">
+              <span style="font-family:var(--font-display);font-size:2.2rem;color:var(--gold-dark);display:block;line-height:1;">7</span>
+              <span style="font-size:0.66rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--brown-light);margin-top:5px;display:block;font-weight:700;">Days</span>
             </div>
-            <div class="stat-item">
-              <span class="stat-num">8</span>
-              <span class="stat-label">Events</span>
+            <div style="text-align:center;">
+              <span style="font-family:var(--font-display);font-size:2.2rem;color:var(--gold-dark);display:block;line-height:1;">8</span>
+              <span style="font-size:0.66rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--brown-light);margin-top:5px;display:block;font-weight:700;">Events</span>
             </div>
-            <div class="stat-item">
-              <span class="stat-num">2</span>
-              <span class="stat-label">Cities</span>
+            <div style="text-align:center;">
+              <span style="font-family:var(--font-display);font-size:2.2rem;color:var(--gold-dark);display:block;line-height:1;">2</span>
+              <span style="font-size:0.66rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--brown-light);margin-top:5px;display:block;font-weight:700;">Cities</span>
             </div>
-            <div class="stat-item">
-              <span class="stat-num">1</span>
-              <span class="stat-label">Forever</span>
+            <div style="text-align:center;">
+              <span style="font-family:var(--font-display);font-size:2.2rem;color:var(--gold-dark);display:block;line-height:1;">1</span>
+              <span style="font-size:0.66rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--brown-light);margin-top:5px;display:block;font-weight:700;">Forever</span>
             </div>
           </div>
         </div>
@@ -1342,340 +771,130 @@
   </section>
 
   <!-- ================================================
-       ITINERARY
+       EVENTS PREVIEW
        ================================================ -->
-  <section class="sec-itinerary" id="itinerary" aria-label="Wedding Itinerary">
+  <section class="sec-alt" aria-label="Events Preview">
     <div class="container">
-      <p class="section-label sr">Save The Dates</p>
+      <span class="section-label sr">Save The Dates</span>
       <h2 class="section-title sr">Wedding Itinerary</h2>
       <div class="gold-rule sr" aria-hidden="true"></div>
       <p class="section-sub sr">Join us across eight magical events spread over seven days of love, tradition and celebration</p>
 
-      <div class="timeline">
-        <div class="timeline-spine" aria-hidden="true"></div>
-
-        <!-- 1. Ganesh Sthapna -->
-        <article class="tl-item sr">
-          <div class="tl-card">
-            <div class="tl-icon" aria-hidden="true">🪔</div>
-            <h3 class="tl-name">Ganesh Sthapna</h3>
-            <p class="tl-time">📅 23 November 2026</p>
-            <p class="tl-venue">📍 Gaurav's Residence, Kota, Rajasthan</p>
-            <p class="tl-desc">The celebrations commence with the auspicious installation of Lord Ganesha — invoking divine blessings and removing all obstacles from the path of the beloved couple.</p>
-          </div>
-          <div class="tl-dot" aria-hidden="true"><div class="tl-dot-inner"></div></div>
-          <div class="tl-date">23 Nov<br/>Sunday</div>
+      <div class="events-preview-grid sr">
+        <article class="event-preview-card">
+          <!-- Card corner accent -->
+          <svg class="card-corner-accent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" fill="none" aria-hidden="true">
+            <path d="M 56 4 C 42 14 26 30 8 54" stroke="#9DAF8E" stroke-width="1.3" stroke-linecap="round"/>
+            <path d="M 56 4 C 44 4 34 7 24 4" stroke="#9DAF8E" stroke-width="1" stroke-linecap="round"/>
+            <path d="M 38 18 C 30 10 32 4 40 8 Q 40 14 38 18 Z" fill="#9DAF8E" opacity="0.6"/>
+            <path d="M 22 32 C 14 26 16 18 24 22 Q 24 28 22 32 Z" fill="#9DAF8E" opacity="0.6"/>
+            <path d="M 34 8 C 30 2 36 -2 40 4 Q 38 6 34 8 Z" fill="#9DAF8E" opacity="0.6"/>
+            <circle cx="56" cy="4" r="4.5" fill="#C4A29E" opacity="0.45"/>
+            <circle cx="56" cy="4" r="2.5" fill="#C4A29E" opacity="0.65"/>
+            <circle cx="56" cy="4" r="1" fill="#C4A29E" opacity="0.9"/>
+          </svg>
+          <div class="ep-icon" aria-hidden="true">🪔</div>
+          <h3 class="ep-name">Ganesh Sthapna</h3>
+          <p class="ep-date">23 November 2026 &bull; Sunday</p>
+          <p class="ep-desc">The celebrations commence with the auspicious installation of Lord Ganesha — invoking divine blessings from the very start.</p>
         </article>
 
-        <!-- 2. Haldi & Mehndi -->
-        <article class="tl-item sr">
-          <div class="tl-date">24 Nov<br/>Morning</div>
-          <div class="tl-dot" aria-hidden="true"><div class="tl-dot-inner"></div></div>
-          <div class="tl-card">
-            <div class="tl-icon" aria-hidden="true">💛</div>
-            <h3 class="tl-name">Haldi &amp; Mehndi</h3>
-            <p class="tl-time">🌅 24 November 2026 — Morning</p>
-            <p class="tl-venue">📍 Gaurav's Residence, Kota, Rajasthan</p>
-            <p class="tl-desc">A vibrant morning of golden haldi and intricate mehndi artistry. Come dressed in yellow, wear your brightest smile, and be ready to celebrate!</p>
-          </div>
+        <article class="event-preview-card">
+          <svg class="card-corner-accent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" fill="none" aria-hidden="true">
+            <path d="M 56 4 C 42 14 26 30 8 54" stroke="#9DAF8E" stroke-width="1.3" stroke-linecap="round"/>
+            <path d="M 56 4 C 44 4 34 7 24 4" stroke="#9DAF8E" stroke-width="1" stroke-linecap="round"/>
+            <path d="M 38 18 C 30 10 32 4 40 8 Q 40 14 38 18 Z" fill="#9DAF8E" opacity="0.6"/>
+            <path d="M 22 32 C 14 26 16 18 24 22 Q 24 28 22 32 Z" fill="#9DAF8E" opacity="0.6"/>
+            <path d="M 34 8 C 30 2 36 -2 40 4 Q 38 6 34 8 Z" fill="#9DAF8E" opacity="0.6"/>
+            <circle cx="56" cy="4" r="4.5" fill="#C4A29E" opacity="0.45"/>
+            <circle cx="56" cy="4" r="2.5" fill="#C4A29E" opacity="0.65"/>
+            <circle cx="56" cy="4" r="1" fill="#C4A29E" opacity="0.9"/>
+          </svg>
+          <div class="ep-icon" aria-hidden="true">🔥</div>
+          <h3 class="ep-name">Wedding Pheras</h3>
+          <p class="ep-date">26 November 2026 &bull; 5:00 PM</p>
+          <p class="ep-desc">The sacred heart of it all — as Lovely and Gaurav take their seven vows around the holy fire, two souls become one.</p>
         </article>
 
-        <!-- 3. Baarat Departure -->
-        <article class="tl-item sr">
-          <div class="tl-card">
-            <div class="tl-icon" aria-hidden="true">🚂</div>
-            <h3 class="tl-name">Baarat Departure</h3>
-            <p class="tl-time">🌙 24 November 2026 — 8:00 PM</p>
-            <p class="tl-venue">📍 Kota Railway Station → Pathankot</p>
-            <p class="tl-desc">The groom's procession embarks on a celebratory train journey from Kota to Pathankot — a night of music, joy and anticipation on rails!</p>
-          </div>
-          <div class="tl-dot" aria-hidden="true"><div class="tl-dot-inner"></div></div>
-          <div class="tl-date">24 Nov<br/>Night</div>
+        <article class="event-preview-card">
+          <svg class="card-corner-accent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" fill="none" aria-hidden="true">
+            <path d="M 56 4 C 42 14 26 30 8 54" stroke="#9DAF8E" stroke-width="1.3" stroke-linecap="round"/>
+            <path d="M 56 4 C 44 4 34 7 24 4" stroke="#9DAF8E" stroke-width="1" stroke-linecap="round"/>
+            <path d="M 38 18 C 30 10 32 4 40 8 Q 40 14 38 18 Z" fill="#9DAF8E" opacity="0.6"/>
+            <path d="M 22 32 C 14 26 16 18 24 22 Q 24 28 22 32 Z" fill="#9DAF8E" opacity="0.6"/>
+            <path d="M 34 8 C 30 2 36 -2 40 4 Q 38 6 34 8 Z" fill="#9DAF8E" opacity="0.6"/>
+            <circle cx="56" cy="4" r="4.5" fill="#C4A29E" opacity="0.45"/>
+            <circle cx="56" cy="4" r="2.5" fill="#C4A29E" opacity="0.65"/>
+            <circle cx="56" cy="4" r="1" fill="#C4A29E" opacity="0.9"/>
+          </svg>
+          <div class="ep-icon" aria-hidden="true">🎊</div>
+          <h3 class="ep-name">Grand Reception</h3>
+          <p class="ep-date">28 November 2026 &bull; Evening</p>
+          <p class="ep-desc">An opulent reception under the stars at the magnificent City Palace Amphitheatre — an evening of grandeur and celebration.</p>
         </article>
+      </div>
 
-        <!-- 4. Engagement -->
-        <article class="tl-item sr">
-          <div class="tl-date">25 Nov<br/>Evening</div>
-          <div class="tl-dot" aria-hidden="true"><div class="tl-dot-inner"></div></div>
-          <div class="tl-card">
-            <div class="tl-icon" aria-hidden="true">💍</div>
-            <h3 class="tl-name">Engagement Ceremony</h3>
-            <p class="tl-time">🌆 25 November 2026 — Evening</p>
-            <p class="tl-venue">📍 Best Western La Vista, Pathankot, Punjab</p>
-            <p class="tl-desc">The official exchange of rings as Lovely and Gaurav pledge their love and commitment, surrounded by the warmth of family and the joy of friends.</p>
-          </div>
-        </article>
-
-        <!-- 5. Wedding Pheras -->
-        <article class="tl-item sr">
-          <div class="tl-card">
-            <div class="tl-icon" aria-hidden="true">🔥</div>
-            <h3 class="tl-name">Wedding Pheras</h3>
-            <p class="tl-time">🕔 26 November 2026 — 5:00 PM to 7:00 PM</p>
-            <p class="tl-venue">📍 Best Western La Vista, Pathankot, Punjab</p>
-            <p class="tl-desc">The sacred heart of it all — as Lovely and Gaurav take their seven vows around the holy fire, two souls become one in the most beautiful ceremony.</p>
-          </div>
-          <div class="tl-dot" aria-hidden="true"><div class="tl-dot-inner"></div></div>
-          <div class="tl-date">26 Nov<br/>5–7 PM</div>
-        </article>
-
-        <!-- 6. Baarat Return -->
-        <article class="tl-item sr">
-          <div class="tl-date">27 Nov<br/>Thursday</div>
-          <div class="tl-dot" aria-hidden="true"><div class="tl-dot-inner"></div></div>
-          <div class="tl-card">
-            <div class="tl-icon" aria-hidden="true">🚂</div>
-            <h3 class="tl-name">Baarat Return to Kota</h3>
-            <p class="tl-time">📅 27 November 2026</p>
-            <p class="tl-venue">📍 Pathankot → Kota, Rajasthan</p>
-            <p class="tl-desc">The newlyweds and their joyous entourage make their way back to Kota, carrying the blessings and memories of a wedding celebrated with all the heart.</p>
-          </div>
-        </article>
-
-        <!-- 7. Reception -->
-        <article class="tl-item sr">
-          <div class="tl-card">
-            <div class="tl-icon" aria-hidden="true">🎊</div>
-            <h3 class="tl-name">Grand Reception</h3>
-            <p class="tl-time">📅 28 November 2026 — Evening</p>
-            <p class="tl-venue">📍 City Palace Kota Amphitheatre, Kota, Rajasthan</p>
-            <p class="tl-desc">An opulent reception under the stars at the magnificent City Palace Amphitheatre — an evening of grandeur, dance, and celebration. Stay at Keys Hotel, Kota.</p>
-          </div>
-          <div class="tl-dot" aria-hidden="true"><div class="tl-dot-inner"></div></div>
-          <div class="tl-date">28 Nov<br/>Evening</div>
-        </article>
-
-        <!-- 8. Grah Pravesh -->
-        <article class="tl-item sr">
-          <div class="tl-date">29 Nov<br/>Saturday</div>
-          <div class="tl-dot" aria-hidden="true"><div class="tl-dot-inner"></div></div>
-          <div class="tl-card">
-            <div class="tl-icon" aria-hidden="true">🏠</div>
-            <h3 class="tl-name">Grah Pravesh</h3>
-            <p class="tl-time">📅 29 November 2026</p>
-            <p class="tl-venue">📍 Gaurav's Residence, Kota, Rajasthan</p>
-            <p class="tl-desc">The beloved Grah Pravesh — as the bride steps across the threshold of her new home for the first time, beginning a lifetime of love, warmth and togetherness.</p>
-          </div>
-        </article>
-
+      <div style="text-align:center;" class="sr">
+        <a href="events.html" class="view-all-link">View Full Itinerary &rarr;</a>
       </div>
     </div>
   </section>
 
   <!-- ================================================
-       GALLERY
+       RSVP CTA
        ================================================ -->
-  <section class="sec-gallery" id="gallery" aria-label="Photo Gallery">
+  <section class="sec" aria-label="RSVP Call to Action">
     <div class="container">
-      <p class="section-label sr">Captured Moments</p>
-      <h2 class="section-title sr">Gallery</h2>
-      <div class="gold-rule sr" aria-hidden="true"></div>
-      <p class="section-sub sr">A glimpse into our beautiful journey together — more memories to be made soon</p>
-
-      <div class="gallery-grid">
-        <div class="g-item sr" data-img="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1200&q=90">
-          <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&q=80" alt="Couple portrait" loading="lazy" />
-          <div class="g-overlay" aria-hidden="true">💕</div>
-        </div>
-        <div class="g-item sr" data-img="https://images.unsplash.com/photo-1591604021695-0c69b7c05981?w=800&q=90">
-          <img src="https://images.unsplash.com/photo-1591604021695-0c69b7c05981?w=500&q=80" alt="Wedding moments" loading="lazy" />
-          <div class="g-overlay" aria-hidden="true">✨</div>
-        </div>
-        <div class="g-item sr" data-img="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=90">
-          <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500&q=80" alt="Floral decor" loading="lazy" />
-          <div class="g-overlay" aria-hidden="true">🌸</div>
-        </div>
-        <div class="g-item sr" data-img="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1200&q=90">
-          <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=800&q=80" alt="Ceremony" loading="lazy" />
-          <div class="g-overlay" aria-hidden="true">🔥</div>
-        </div>
-        <div class="g-item sr" data-img="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&q=90">
-          <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=500&q=80" alt="Reception" loading="lazy" />
-          <div class="g-overlay" aria-hidden="true">🎊</div>
-        </div>
-        <div class="g-item sr" data-img="https://images.unsplash.com/photo-1561089489-f13d5e730d72?w=800&q=90">
-          <img src="https://images.unsplash.com/photo-1561089489-f13d5e730d72?w=500&q=80" alt="Rings" loading="lazy" />
-          <div class="g-overlay" aria-hidden="true">💍</div>
-        </div>
+      <!-- Sprig divider -->
+      <div class="sprig-divider sr" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 60" width="400" height="60" fill="none">
+          <path d="M 50 30 C 120 30 180 30 200 30 C 220 30 280 30 350 30" stroke="#9DAF8E" stroke-width="1.2"/>
+          <path d="M 100 30 C 95 18 103 13 108 22 Q 106 27 100 30 Z" fill="#9DAF8E" opacity="0.6"/>
+          <path d="M 100 30 C 95 42 103 47 108 38 Q 106 33 100 30 Z" fill="#9DAF8E" opacity="0.6"/>
+          <path d="M 145 30 C 141 19 148 15 153 24 Q 151 28 145 30 Z" fill="#9DAF8E" opacity="0.6"/>
+          <path d="M 145 30 C 141 41 148 45 153 36 Q 151 32 145 30 Z" fill="#9DAF8E" opacity="0.6"/>
+          <path d="M 300 30 C 295 18 303 13 308 22 Q 306 27 300 30 Z" fill="#9DAF8E" opacity="0.6"/>
+          <path d="M 300 30 C 295 42 303 47 308 38 Q 306 33 300 30 Z" fill="#9DAF8E" opacity="0.6"/>
+          <path d="M 255 30 C 251 19 258 15 263 24 Q 261 28 255 30 Z" fill="#9DAF8E" opacity="0.6"/>
+          <path d="M 255 30 C 251 41 258 45 263 36 Q 261 32 255 30 Z" fill="#9DAF8E" opacity="0.6"/>
+          <circle cx="200" cy="30" r="9" fill="#C4A29E" opacity="0.35"/>
+          <circle cx="200" cy="30" r="6" fill="#C4A29E" opacity="0.5"/>
+          <circle cx="200" cy="30" r="3.5" fill="#C4A29E" opacity="0.7"/>
+          <circle cx="200" cy="30" r="1.5" fill="#C4A29E" opacity="0.9"/>
+          <circle cx="185" cy="30" r="1.5" fill="#C8A45A" opacity="0.6"/>
+          <circle cx="215" cy="30" r="1.5" fill="#C8A45A" opacity="0.6"/>
+          <circle cx="52" cy="30" r="2.5" fill="#9DAF8E" opacity="0.4"/>
+          <circle cx="348" cy="30" r="2.5" fill="#9DAF8E" opacity="0.4"/>
+        </svg>
       </div>
-    </div>
-  </section>
 
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">&times;</button>
-    <img id="lightboxImg" src="" alt="Enlarged photo" />
-  </div>
+      <div class="rsvp-cta-box sr">
+        <!-- Corner botanical accents on CTA box -->
+        <svg style="position:absolute;top:0;left:0;width:100px;height:100px;opacity:0.35;pointer-events:none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+          <path d="M 8 8 C 30 32 55 62 72 95 C 89 128 96 162 98 198" stroke="#9DAF8E" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M 35 48 C 68 36 105 28 148 18" stroke="#9DAF8E" stroke-width="1.2" stroke-linecap="round"/>
+          <path d="M 35 48 C 18 38 16 54 32 57 Q 34 52 35 48 Z" fill="#9DAF8E" opacity="0.65"/>
+          <path d="M 80 35 C 78 18 91 14 96 28 Q 89 34 80 35 Z" fill="#9DAF8E" opacity="0.65"/>
+          <circle cx="18" cy="18" r="7" fill="#C4A29E" opacity="0.5"/>
+          <circle cx="18" cy="18" r="4" fill="#C4A29E" opacity="0.7"/>
+          <circle cx="148" cy="18" r="6" fill="#C4A29E" opacity="0.5"/>
+          <circle cx="148" cy="18" r="3.5" fill="#C4A29E" opacity="0.7"/>
+        </svg>
+        <svg style="position:absolute;top:0;right:0;width:100px;height:100px;opacity:0.35;pointer-events:none;transform:scaleX(-1);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+          <path d="M 8 8 C 30 32 55 62 72 95 C 89 128 96 162 98 198" stroke="#9DAF8E" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M 35 48 C 68 36 105 28 148 18" stroke="#9DAF8E" stroke-width="1.2" stroke-linecap="round"/>
+          <path d="M 35 48 C 18 38 16 54 32 57 Q 34 52 35 48 Z" fill="#9DAF8E" opacity="0.65"/>
+          <path d="M 80 35 C 78 18 91 14 96 28 Q 89 34 80 35 Z" fill="#9DAF8E" opacity="0.65"/>
+          <circle cx="18" cy="18" r="7" fill="#C4A29E" opacity="0.5"/>
+          <circle cx="18" cy="18" r="4" fill="#C4A29E" opacity="0.7"/>
+          <circle cx="148" cy="18" r="6" fill="#C4A29E" opacity="0.5"/>
+          <circle cx="148" cy="18" r="3.5" fill="#C4A29E" opacity="0.7"/>
+        </svg>
 
-  <!-- ================================================
-       VENUES
-       ================================================ -->
-  <section class="sec-venues" id="venues" aria-label="Venue Details">
-    <div class="container">
-      <p class="section-label sr">Celebration Locations</p>
-      <h2 class="section-title sr">Our Venues</h2>
-      <div class="gold-rule sr" aria-hidden="true"></div>
-      <p class="section-sub sr">Across the royal landscapes of Rajasthan and the vibrant spirit of Punjab</p>
-
-      <div class="venue-grid">
-
-        <article class="venue-card sr">
-          <div class="venue-thumb" aria-hidden="true">🏰</div>
-          <div class="venue-body">
-            <h3 class="venue-name">Gaurav's Residence</h3>
-            <p class="venue-loc">📍 Kota, Rajasthan</p>
-            <p class="venue-desc">The warm family home where the celebrations begin and end — host to Ganesh Sthapna, Haldi &amp; Mehndi, and the joyful Grah Pravesh.</p>
-            <div class="venue-map">
-              <iframe
-                title="Kota, Rajasthan map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114840.6099987!2d75.8390!3d25.2138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396f815b23a1c3e9%3A0xf76fdfa2e69e75bb!2sKota%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1"
-                loading="lazy"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-        </article>
-
-        <article class="venue-card sr">
-          <div class="venue-thumb" aria-hidden="true">🏨</div>
-          <div class="venue-body">
-            <h3 class="venue-name">Best Western La Vista</h3>
-            <p class="venue-loc">📍 Pathankot, Punjab</p>
-            <p class="venue-desc">A premier hotel and event venue hosting our Engagement Ceremony and the sacred Wedding Pheras — where the magic truly happens.</p>
-            <div class="venue-map">
-              <iframe
-                title="Best Western La Vista Pathankot map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27152.3!2d75.6527!3d32.2721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391c4037c9c9d69b%3A0x9a2a073e57d18f63!2sPathankot%2C%20Punjab!5e0!3m2!1sen!2sin!4v1"
-                loading="lazy"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-        </article>
-
-        <article class="venue-card sr">
-          <div class="venue-thumb" aria-hidden="true">🏛️</div>
-          <div class="venue-body">
-            <h3 class="venue-name">City Palace Amphitheatre</h3>
-            <p class="venue-loc">📍 Kota, Rajasthan</p>
-            <p class="venue-desc">The magnificent open-air amphitheatre at City Palace Kota — a breathtaking setting for our Grand Reception under a canopy of stars.</p>
-            <div class="venue-map">
-              <iframe
-                title="City Palace Kota map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7176.2!2d75.8551!3d25.1803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396f81528cca8c65%3A0x7f3d4a6d37b45e9e!2sCity%20Palace%20Kota!5e0!3m2!1sen!2sin!4v1"
-                loading="lazy"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ================================================
-       ACCOMMODATION
-       ================================================ -->
-  <section class="sec-accommodation" id="stay" aria-label="Accommodation">
-    <div class="container">
-      <p class="section-label sr">Where To Stay</p>
-      <h2 class="section-title sr">Accommodation</h2>
-      <div class="gold-rule sr" aria-hidden="true"></div>
-      <p class="section-sub sr">We've curated the best stays so you can focus entirely on celebrating with us</p>
-
-      <div class="hotel-grid">
-
-        <article class="hotel-card sr">
-          <div class="hotel-icon" aria-hidden="true">🏨</div>
-          <span class="hotel-tag">Official Stay · Kota</span>
-          <h3 class="hotel-name">Keys Hotel Kota</h3>
-          <p class="hotel-loc">📍 Kota, Rajasthan</p>
-          <p class="hotel-desc">Our recommended hotel for guests attending the Kota events. Comfortable rooms, excellent amenities, and close to the City Palace venue.</p>
-          <a href="https://maps.google.com/?q=Keys+Hotel+Kota" target="_blank" rel="noopener noreferrer" class="hotel-link">View on Google Maps →</a>
-        </article>
-
-        <article class="hotel-card sr">
-          <div class="hotel-icon" aria-hidden="true">🌟</div>
-          <span class="hotel-tag">Venue Hotel · Pathankot</span>
-          <h3 class="hotel-name">Best Western La Vista</h3>
-          <p class="hotel-loc">📍 Pathankot, Punjab</p>
-          <p class="hotel-desc">Stay right at the venue for Engagement and Wedding ceremonies. Modern rooms, warm hospitality — no commute required on the big day!</p>
-          <a href="https://maps.google.com/?q=Best+Western+La+Vista+Pathankot" target="_blank" rel="noopener noreferrer" class="hotel-link">View on Google Maps →</a>
-        </article>
-
-        <article class="hotel-card sr">
-          <div class="hotel-icon" aria-hidden="true">✈️</div>
-          <span class="hotel-tag">Travel Info</span>
-          <h3 class="hotel-name">Getting There</h3>
-          <p class="hotel-loc">🚂 Train &nbsp;•&nbsp; ✈️ Flight &nbsp;•&nbsp; 🚗 Road</p>
-          <p class="hotel-desc">
-            <strong>Kota:</strong> Best reached via Kota Junction railway station — well connected from Delhi &amp; Mumbai.<br/><br/>
-            <strong>Pathankot:</strong> Accessible via Pathankot Cantt railway station or Pathankot Airport. Please reach out if you need help with travel plans!
-          </p>
-          <a href="mailto:gauravverma@example.com" class="hotel-link">Contact Us for Help →</a>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ================================================
-       RSVP
-       ================================================ -->
-  <section class="sec-rsvp" id="rsvp" aria-label="RSVP">
-    <div class="rsvp-blob" aria-hidden="true"></div>
-    <div class="container">
-      <p class="section-label sr">You Are Invited</p>
-      <h2 class="section-title sr">RSVP</h2>
-      <div class="gold-rule sr" aria-hidden="true"></div>
-      <p class="section-sub sr">Please let us know if you'll be joining our celebration. We would be overjoyed to share these moments with you!</p>
-
-      <div class="rsvp-box sr">
-        <form id="rsvpForm" novalidate>
-          <label class="form-label" for="rsvpName">Your Full Name</label>
-          <input
-            class="form-input"
-            type="text"
-            id="rsvpName"
-            name="name"
-            placeholder="Enter your full name"
-            required
-            autocomplete="name"
-          />
-
-          <label class="form-label">Will You Be Attending?</label>
-          <div class="radio-row" role="radiogroup" aria-label="Attendance selection">
-            <label class="radio-opt">
-              <input type="radio" name="attending" value="yes" required />
-              🎉 Joyfully Accept
-            </label>
-            <label class="radio-opt">
-              <input type="radio" name="attending" value="no" />
-              😢 Regretfully Decline
-            </label>
-          </div>
-
-          <label class="form-label" for="rsvpCount">Number of Guests (including you)</label>
-          <input
-            class="form-input"
-            type="number"
-            id="rsvpCount"
-            name="guests"
-            min="1"
-            max="20"
-            value="1"
-            placeholder="e.g. 2"
-          />
-
-          <button class="rsvp-btn" type="submit" id="rsvpSubmit">Send RSVP ✉️</button>
-        </form>
-
-        <div class="rsvp-success" id="rsvpSuccess" role="alert" aria-live="polite">
-          <div class="rsvp-success-icon" aria-hidden="true">💕</div>
-          <h3>Thank You!</h3>
-          <p>Your RSVP has been received. We are so thrilled to celebrate with you — see you in November! 🥂</p>
-        </div>
+        <span class="section-eyebrow" style="display:block;margin-bottom:8px;">You Are Invited</span>
+        <h2>We'd Love to Have You</h2>
+        <p>Please let us know if you'll be joining our celebration. We would be overjoyed to share these magical moments with you!</p>
+        <a href="rsvp.html" class="btn-gold">Send Your RSVP</a>
       </div>
     </div>
   </section>
@@ -1684,250 +903,37 @@
        FOOTER
        ================================================ -->
   <footer class="footer" aria-label="Footer">
+    <div class="footer-sprig" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 40" width="260" height="32" fill="none">
+        <path d="M 40 20 C 90 20 140 20 160 20 C 180 20 230 20 280 20" stroke="#9DAF8E" stroke-width="1"/>
+        <path d="M 90 20 C 85 11 92 7 97 15 Q 95 18 90 20 Z" fill="#9DAF8E" opacity="0.6"/>
+        <path d="M 90 20 C 85 29 92 33 97 25 Q 95 22 90 20 Z" fill="#9DAF8E" opacity="0.6"/>
+        <path d="M 125 20 C 121 12 128 8 132 16 Q 130 19 125 20 Z" fill="#9DAF8E" opacity="0.6"/>
+        <path d="M 195 20 C 191 12 198 8 202 16 Q 200 19 195 20 Z" fill="#9DAF8E" opacity="0.6"/>
+        <path d="M 230 20 C 225 11 232 7 237 15 Q 235 18 230 20 Z" fill="#9DAF8E" opacity="0.6"/>
+        <path d="M 230 20 C 225 29 232 33 237 25 Q 235 22 230 20 Z" fill="#9DAF8E" opacity="0.6"/>
+        <circle cx="160" cy="20" r="7" fill="#C4A29E" opacity="0.4"/>
+        <circle cx="160" cy="20" r="4.5" fill="#C4A29E" opacity="0.55"/>
+        <circle cx="160" cy="20" r="2" fill="#C4A29E" opacity="0.8"/>
+        <circle cx="42" cy="20" r="2" fill="#9DAF8E" opacity="0.4"/>
+        <circle cx="278" cy="20" r="2" fill="#9DAF8E" opacity="0.4"/>
+      </svg>
+    </div>
     <p class="footer-couple">Lovely &amp; Gaurav</p>
-    <p class="footer-date-text">23 — 29 November 2026 &nbsp;·&nbsp; Kota &amp; Pathankot</p>
+    <p class="footer-date-text">23 &mdash; 29 November 2026 &nbsp;&middot;&nbsp; Kota &amp; Pathankot</p>
 
     <ul class="footer-nav">
-      <li><a href="#story">Our Story</a></li>
-      <li><a href="#itinerary">Itinerary</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#venues">Venues</a></li>
-      <li><a href="#stay">Stay</a></li>
-      <li><a href="#rsvp">RSVP</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="venues.html">Venues</a></li>
+      <li><a href="travel.html">Travel</a></li>
+      <li><a href="rsvp.html">RSVP</a></li>
     </ul>
 
-    <p class="footer-credit">Made with ❤️ for Lovely &amp; Gaurav's Wedding 2026</p>
+    <p class="footer-credit">Made with &#10084;&#65039; for Lovely &amp; Gaurav's Wedding 2026</p>
   </footer>
 
-  <!-- Audio -->
-  <audio id="bgAudio" loop preload="none">
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
-  </audio>
-
-  <!-- ================================================
-       JAVASCRIPT
-       ================================================ -->
-  <script>
-    'use strict';
-
-    /* ---- THEME SWITCHER ---- */
-    const themeDockBtns = document.querySelectorAll('.theme-dock-btn');
-    const html = document.documentElement;
-    const body = document.body;
-
-    const THEME_MAP = {
-      royal:    '',
-      modern:   'modern',
-      romantic: 'romantic',
-      vibrant:  'vibrant',
-    };
-
-    function setTheme(t) {
-      const val = THEME_MAP[t];
-      if (val === '') {
-        body.removeAttribute('data-theme');
-      } else {
-        body.setAttribute('data-theme', val);
-      }
-      themeDockBtns.forEach(b => b.classList.toggle('active', b.dataset.t === t));
-      try { localStorage.setItem('weddingTheme', t); } catch(e) {}
-    }
-
-    themeDockBtns.forEach(btn => {
-      btn.addEventListener('click', () => setTheme(btn.dataset.t));
-    });
-
-    // Restore saved theme
-    try {
-      const saved = localStorage.getItem('weddingTheme');
-      if (saved && THEME_MAP[saved] !== undefined) setTheme(saved);
-    } catch(e) {}
-
-
-    /* ---- COUNTDOWN ---- */
-    const TARGET = new Date('2026-11-26T17:00:00+05:30');
-
-    function pad(n, len = 2) { return String(n).padStart(len, '0'); }
-
-    function tick() {
-      const now  = new Date();
-      const diff = TARGET - now;
-      if (diff <= 0) {
-        document.getElementById('cdDays').textContent  = '000';
-        document.getElementById('cdHours').textContent = '00';
-        document.getElementById('cdMins').textContent  = '00';
-        document.getElementById('cdSecs').textContent  = '00';
-        return;
-      }
-      const d = Math.floor(diff / 864e5);
-      const h = Math.floor((diff % 864e5) / 36e5);
-      const m = Math.floor((diff % 36e5)  / 6e4);
-      const s = Math.floor((diff % 6e4)   / 1e3);
-
-      document.getElementById('cdDays').textContent  = pad(d, 3);
-      document.getElementById('cdHours').textContent = pad(h);
-      document.getElementById('cdMins').textContent  = pad(m);
-      document.getElementById('cdSecs').textContent  = pad(s);
-    }
-    tick();
-    setInterval(tick, 1000);
-
-
-    /* ---- NAV SCROLL ---- */
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 60);
-    }, { passive: true });
-
-
-    /* ---- MOBILE NAV ---- */
-    const hamburger  = document.getElementById('hamburger');
-    const mobileNav  = document.getElementById('mobileNav');
-
-    hamburger.addEventListener('click', () => {
-      const isOpen = mobileNav.classList.toggle('open');
-      hamburger.classList.toggle('open', isOpen);
-      hamburger.setAttribute('aria-expanded', isOpen);
-      body.style.overflow = isOpen ? 'hidden' : '';
-    });
-
-    document.querySelectorAll('[data-nav-close]').forEach(el => {
-      el.addEventListener('click', () => {
-        mobileNav.classList.remove('open');
-        hamburger.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-        body.style.overflow = '';
-      });
-    });
-
-
-    /* ---- SCROLL REVEAL ---- */
-    const srEls = document.querySelectorAll('.sr');
-
-    const srObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('on');
-          srObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-    // Stagger sibling cards
-    document.querySelectorAll('.venue-grid .venue-card, .hotel-grid .hotel-card, .timeline .tl-item').forEach((el, i) => {
-      el.style.transitionDelay = `${(i % 3) * 0.12}s`;
-    });
-
-    srEls.forEach(el => srObserver.observe(el));
-
-
-    /* ---- PARALLAX HERO GLOW ---- */
-    const heroGlow = document.querySelector('.hero-glow');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY < window.innerHeight && heroGlow) {
-        heroGlow.style.transform = `translateY(${window.scrollY * 0.3}px)`;
-      }
-    }, { passive: true });
-
-
-    /* ---- GALLERY LIGHTBOX ---- */
-    const lightbox      = document.getElementById('lightbox');
-    const lightboxImg   = document.getElementById('lightboxImg');
-    const lightboxClose = document.getElementById('lightboxClose');
-
-    document.querySelectorAll('.g-item').forEach(item => {
-      item.addEventListener('click', () => {
-        lightboxImg.src = item.dataset.img;
-        lightboxImg.alt = item.querySelector('img').alt;
-        lightbox.classList.add('open');
-        body.style.overflow = 'hidden';
-      });
-    });
-
-    function closeLightbox() {
-      lightbox.classList.remove('open');
-      body.style.overflow = '';
-      lightboxImg.src = '';
-    }
-
-    lightboxClose.addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
-
-
-    /* ---- MUSIC ---- */
-    const musicBtn = document.getElementById('musicBtn');
-    const bgAudio  = document.getElementById('bgAudio');
-    let playing = false;
-
-    musicBtn.addEventListener('click', () => {
-      if (playing) {
-        bgAudio.pause();
-        musicBtn.textContent = '🎵';
-        musicBtn.classList.remove('playing');
-      } else {
-        bgAudio.play().catch(() => {});
-        musicBtn.textContent = '🔊';
-        musicBtn.classList.add('playing');
-      }
-      playing = !playing;
-    });
-
-
-    /* ---- RSVP — GOOGLE SHEETS VIA APPS SCRIPT ----
-     *
-     * SETUP INSTRUCTIONS:
-     * 1. Create a new Google Sheet
-     * 2. Go to Extensions → Apps Script
-     * 3. Paste the code from google-apps-script.js into the editor
-     * 4. Click Deploy → New Deployment → Web App
-     *    - Execute as: Me
-     *    - Who has access: Anyone
-     * 5. Copy the Web App URL and replace SCRIPT_URL below
-     *
-     */
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbymBnmj9zc0JcQn8AgcnT8b-cnwftEZ0btwJy8POQcXrv7_MPqSpmydfuj7Oy1mpybFvg/exec';
-
-    const rsvpForm    = document.getElementById('rsvpForm');
-    const rsvpSuccess = document.getElementById('rsvpSuccess');
-    const rsvpSubmit  = document.getElementById('rsvpSubmit');
-
-    rsvpForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      const name     = document.getElementById('rsvpName').value.trim();
-      const attending = document.querySelector('input[name="attending"]:checked');
-      const guests   = document.getElementById('rsvpCount').value;
-
-      if (!name) {
-        document.getElementById('rsvpName').focus();
-        return;
-      }
-      if (!attending) {
-        alert('Please select whether you will be attending.');
-        return;
-      }
-
-      rsvpSubmit.disabled = true;
-      rsvpSubmit.textContent = 'Sending…';
-
-      const payload = new FormData();
-      payload.append('name',      name);
-      payload.append('attending', attending.value);
-      payload.append('guests',    guests);
-      payload.append('timestamp', new Date().toISOString());
-
-      try {
-        if (SCRIPT_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
-          await fetch(SCRIPT_URL, { method: 'POST', body: payload });
-        }
-      } catch (_) { /* fail silently — still show success */ }
-
-      rsvpForm.style.display    = 'none';
-      rsvpSuccess.style.display = 'block';
-    });
-
-  </script>
-
+  <script src="js/main.js"></script>
 </body>
 </html>
